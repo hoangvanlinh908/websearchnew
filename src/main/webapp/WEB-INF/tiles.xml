@@ -21,7 +21,7 @@
 
 
     <definition name="homepage"
-                extends="client.definition">
+                extends="client.definition1">
         <put-attribute name="body" value="/WEB-INF/jsp/jop/homepage.jsp" />
 
     </definition>

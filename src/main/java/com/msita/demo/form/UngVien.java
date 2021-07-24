@@ -33,7 +33,6 @@ public class UngVien {
     private String GioiTinh;
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "MM/dd/yyyy")
-    @NotBlank
     private Date NgaySinh;
     @NotBlank
     private String DiaChi;

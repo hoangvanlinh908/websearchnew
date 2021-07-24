@@ -21,7 +21,6 @@ public class BaidangForm {
     private String MaBaiDang;
     @NotBlank
     @Column(name = "TieuDe")
-    @Min(1)
     private String TieuDe;
     @Column(name = "NgayDang")
     @Temporal(TemporalType.DATE)
@@ -33,7 +32,7 @@ public class BaidangForm {
     @NotBlank
     @Column(name = "TinhChat")
     private String TinhChat;
-    @Min(1)
+    @NotBlank
     @Column(name = "MucLuong")
     private String MucLuong;
     @NotBlank
