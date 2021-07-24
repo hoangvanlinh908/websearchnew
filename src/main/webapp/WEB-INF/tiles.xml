@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+    <!--     Base Define -->
+    <definition name="client.definition"
+                template="/WEB-INF/jsp/layouts/clientLayout.jsp">
+        <put-attribute name="header" value="/WEB-INF/jsp/jop/header1.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/WEB-INF/jsp/jop/footer1.jsp" />
+    </definition>
+    <definition name="client.definition1"
+                template="/WEB-INF/jsp/layouts/clientLayout2.jsp">
+        <put-attribute name="header" value="/WEB-INF/jsp/jop/header.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/WEB-INF/jsp/jop/footer.jsp" />
+    </definition>
+
+
+    <definition name="homepage"
+                extends="client.definition">
+        <put-attribute name="body" value="/WEB-INF/jsp/jop/homepage.jsp" />
+
+    </definition>
+    <definition name="homepage1"
+                extends="client.definition">
+        <put-attribute name="body" value="/WEB-INF/jsp/jop/homepage1.jsp" />
+
+    </definition>
+    <definition name="login"
+                extends="client.definition1">
+        <put-attribute name="body" value="/WEB-INF/jsp/jop/login.jsp" />
+
+    </definition>
+    <definition name="registerUv"
+                extends="client.definition1">
+        <put-attribute name="body" value="/WEB-INF/jsp/jop/registerUv.jsp" />
+
+    </definition>
+    <definition name="loginUv"
+                extends="client.definition1">
+        <put-attribute name="body" value="/WEB-INF/jsp/jop/loginUv.jsp" />
+
+    </definition>
+    <definition name="register"
+                extends="client.definition1">
+        <put-attribute name="body" value="/WEB-INF/jsp/jop/register.jsp" />
+
+    </definition>
+    <definition name="dangbai"
+                extends="client.definition1">
+        <put-attribute name="body" value="/WEB-INF/jsp/jop/dangbai.jsp" />
+
+    </definition>
+
+    <definition name="deltail"
+                extends="client.definition1">
+        <put-attribute name="body" value="/WEB-INF/jsp/jop/deltails.jsp" />
+
+    </definition>
+    <definition name="editNTD"
+                extends="client.definition1">
+        <put-attribute name="body" value="/WEB-INF/jsp/jop/editNTD.jsp" />
+
+    </definition>
+    <definition name="danhsach"
+                extends="client.definition1">
+        <put-attribute name="body" value="/WEB-INF/jsp/jop/danhsach.jsp" />
+    </definition>
+    <definition name="nophoso"
+                extends="client.definition1">
+        <put-attribute name="body" value="/WEB-INF/jsp/jop/nophoso.jsp" />
+    </definition>
+    <definition name="hoso"
+                extends="client.definition1">
+        <put-attribute name="body" value="/WEB-INF/jsp/jop/hoso.jsp" />
+    </definition>
+    <definition name="danhsachbd"
+                extends="client.definition1">
+        <put-attribute name="body" value="/WEB-INF/jsp/jop/danhsachbd.jsp" />
+    </definition>
+    <definition name="danhsachungtuyen"
+                extends="client.definition1">
+        <put-attribute name="body" value="/WEB-INF/jsp/jop/danhsachungtuyen.jsp" />
+    </definition>
+    <definition name="hocvan"
+                extends="client.definition1">
+        <put-attribute name="body" value="/WEB-INF/jsp/jop/hocvan.jsp" />
+    </definition>
+    <definition name="kynang"
+                extends="client.definition1">
+        <put-attribute name="body" value="/WEB-INF/jsp/jop/kynang.jsp" />
+    </definition>
+    <definition name="kinhnghiem"
+                extends="client.definition1">
+        <put-attribute name="body" value="/WEB-INF/jsp/jop/kinhnghiem.jsp" />
+    </definition>
+    <definition name="homepagesearch"
+                extends="client.definition1">
+        <put-attribute name="body" value="/WEB-INF/jsp/jop/homepagesearch.jsp" />
+    </definition>
+    <definition name="nganhnghelist"
+                extends="client.definition1">
+        <put-attribute name="body" value="/WEB-INF/jsp/jop/nganhnghe.jsp" />
+    </definition>
+    <definition name="cv"
+                extends="client.definition">
+        <put-attribute name="body" value="/WEB-INF/jsp/jop/cv.jsp" />
+    </definition>
+</tiles-definitions>
