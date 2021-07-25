@@ -5,7 +5,7 @@
 
 <!-- End banner Area -->
 <form class="form-area "action="/loginUv" method="post" >
-    <h2 style="margin-left: 30%;">Đăng Nhập nhà Ứng viên</h2>
+    <h2 style="margin-left: 30%;">Đăng Nhập Ứng viên</h2>
     <div class="single-post d-flex flex-row">
 
         <div class="col-lg-6 form-group" style="margin: 0 auto;padding:20px">
@@ -14,7 +14,9 @@
 
             <input name="MatKhau" placeholder="passwork"  class="common-input mb-20 form-control" required="" type="password">
             <h2 style="color: red"> ${errorMessage}</h2>
+            <a href="/registerUV"> Đăng ký ứng viên</a>
             <button class="primary-btn mt-20 text-white" style="float: right;">Đăng Nhập</button>
+
             <div class="mt-20 alert-msg" style="text-align: left;"></div>
         </div>
     </div>

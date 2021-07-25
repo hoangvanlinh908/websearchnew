@@ -110,4 +110,8 @@
                 extends="client.definition">
         <put-attribute name="body" value="/WEB-INF/jsp/jop/cv.jsp" />
     </definition>
+    <definition name="xemcv"
+                extends="client.definition">
+        <put-attribute name="body" value="/WEB-INF/jsp/jop/xemcv.jsp" />
+    </definition>
 </tiles-definitions>

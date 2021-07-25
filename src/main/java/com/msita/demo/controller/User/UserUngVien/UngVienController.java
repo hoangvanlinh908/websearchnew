@@ -28,6 +28,7 @@ public class UngVienController extends BaseController {
         if (loginUserUV != null) {
             return "redirect:/home";
         }
+        session.removeAttribute("loginFormUser");
         model.addAttribute("loginUV", new UngVien());
 
         return "loginUv";
@@ -239,4 +240,5 @@ public class UngVienController extends BaseController {
         model.addAttribute("listkynghiem",kyNangs);
         return "cv";
     }
+
 }

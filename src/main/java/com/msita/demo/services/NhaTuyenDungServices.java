@@ -76,6 +76,12 @@ public class NhaTuyenDungServices {
     public void  deldetehs(Long id){
         hsRepository.deleteById(id);
     }
+    public void  deldetehsmabd(String id){
+        hsRepository.deleteHoSoUngTuyenByMaBaiDang(id);
+    }
+    public void  deldetebd(String id){
+        baiDangRepository.deleteById(id);
+    }
     public  List<BaidangModel> searchname(String ten){
         return  baiDangRepositoryModel.searchByNameLike(ten);
     }

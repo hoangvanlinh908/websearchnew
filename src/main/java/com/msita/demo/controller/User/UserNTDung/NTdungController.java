@@ -1,8 +1,6 @@
 package com.msita.demo.controller.User.UserNTDung;
 import com.msita.demo.controller.BaseController;
-import com.msita.demo.form.BaidangForm;
-import com.msita.demo.form.HoSoUngTuyen;
-import com.msita.demo.form.NhaTuyenDung;
+import com.msita.demo.form.*;
 import com.msita.demo.models.BaidangModel;
 import com.msita.demo.models.NhaTuyenDungModel;
 import com.msita.demo.services.NhaTuyenDungServices;
@@ -36,6 +34,7 @@ public class NTdungController extends BaseController {
         if (loginUserId != null) {
             return "redirect:/home";
         }
+        session.removeAttribute("loginFormUserUV");
         model.addAttribute("loginNTD", new NhaTuyenDung());
         model.addAttribute("registerloginNTD", new NhaTuyenDung());
         return "login";
@@ -221,7 +220,7 @@ public class NTdungController extends BaseController {
         return "danhsachbd";
     }
     @GetMapping("/danhsachungtuyen")
-    public String deletehoso(@RequestParam("id") String id ,Model model,HttpSession session){
+    public String danhsachungtuyen(@RequestParam("id") String id ,Model model,HttpSession session){
         String mantd = (String) session.getAttribute("loginFormUser");
 
         if (mantd == null) {
@@ -230,6 +229,34 @@ public class NTdungController extends BaseController {
         List<HoSoUngTuyen> dsuv = nhaTuyenDungServices.finallbd(id);
         model.addAttribute("finlistuv",dsuv);
         return "danhsachungtuyen";
+    }
+    @GetMapping("/deletebd")
+    public String deletebd(@RequestParam("id") String id ,Model model,HttpSession session){
+        String mantd = (String) session.getAttribute("loginFormUser");
+
+        if (mantd == null) {
+            return "redirect:/login";
+        }
+       nhaTuyenDungServices.deldetehsmabd(id);
+        nhaTuyenDungServices.deldetebd(id);
+        return "redirect:/danhsachbd";
+    }
+    @GetMapping("/xemcv")
+    public  String  xemthongtinungvien(@RequestParam("id") String id ,HttpSession session,Model model){
+        String MaUngien = (String) session.getAttribute("loginFormUser");
+        if (MaUngien == null) {
+
+            return "redirect:/login";
+        }
+        List<HocVan> hocVans = ungVienServices.finhocvan(id);
+        List<KinhNghiem> kinhNghiems = ungVienServices.finKinhNghiem(id);
+        List<KyNang> kyNangs = ungVienServices.finKyNang(id);
+        List<UngVien> ungViens = ungVienServices.finungvien(id);
+        model.addAttribute("listhocvan1",hocVans);
+        model.addAttribute("listkinhnghiem1",kinhNghiems);
+        model.addAttribute("listkynghiem1",kyNangs);
+        model.addAttribute("ungvien",ungViens);
+        return "xemcv";
     }
 
     }

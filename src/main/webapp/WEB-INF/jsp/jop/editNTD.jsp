@@ -44,7 +44,7 @@
                 </div>
                 <img src="/imglogo/${nhatuyendung.getLogo()}" height="80px" width="80px">
             </div>
-            <button type="submit" class="primary-btn mt-20 text-white" style="float: right;">Đăng Ký</button>
+            <button type="submit" class="primary-btn mt-20 text-white" style="float: right;">Sửa</button>
             <div class="mt-20 alert-msg" style="text-align: left;"></div>
         </div>
     </div>

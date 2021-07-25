@@ -81,4 +81,7 @@ private NganhNgher nganhNghe;
     public void  deldete3(String id){
         kinhnghiemRepository.deleteById(id);
     }
+    public List<UngVien> finungvien (String id){
+       return uvRepository.findAllById(Collections.singleton(id));
+    }
 }

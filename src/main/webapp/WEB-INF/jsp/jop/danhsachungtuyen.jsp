@@ -29,7 +29,7 @@
                 <td>${finalluv.getTinhTrang()}</td>
                 <td>${finalluv.getFileCV()}</td>
                 <td>
-                    <a class="btn btn-xs btn-info" href="/edithoso?id=${finalluv.getId()}">xem</a>
+                    <a class="btn btn-xs btn-info" href="/xemcv?id=${finalluv.getMaUngVien()}">xem</a>
                     <a class="btn btn-xs btn-danger" href="/deletehoso?id=${finalluv.getId()}">xóa</a>
                 </td>
             </tr>
