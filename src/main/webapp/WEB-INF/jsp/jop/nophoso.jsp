@@ -5,7 +5,7 @@
 
 <!-- End banner Area -->
 <form:form class="form-area"  action="/nophoso" modelAttribute="nophoso" method="post"  enctype="multipart/form-data">
-    <h2 style="margin-left: 30%;">Đăng Ký nhà tuyển dụng</h2>
+    <h2 style="margin-left: 30%;">Đăng Ký hồ sơ</h2>
     <div class="single-post d-flex flex-row">
 
         <div class="col-lg-8 form-group" style="margin: 0 auto;padding:50px;">
