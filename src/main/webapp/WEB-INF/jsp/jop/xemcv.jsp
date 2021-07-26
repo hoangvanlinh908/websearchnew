@@ -42,10 +42,7 @@ Hoc Van
                 <td>${hocvan.getNgoaiNgu()}</td>
                 <td>${hocvan.getTrinhDo()}</td>
                 <td>${hocvan.getMoTa()}</td>
-                <td >
-                <a class="btn btn-xs btn-danger" href="/deletehocvan?id=${hocvan.getMaHocVan()}">xóa</a>
-                </td>
-
+               
 
 
                     <%--            <td>--%>
@@ -89,9 +86,7 @@ Kinh nghiem
                 <td>${kinhnghiem.getThoiGianBD()}</td>
                 <td>${kinhnghiem.getThoiGianKT()}</td>
                 <td>${kinhnghiem.getMoTaCV()}</td>
-                <td >
-                <a class="btn btn-xs btn-danger" href="/deletekinhnghiem?id=${kinhnghiem.getMaKinhNghiem()}">xóa</a>
-                </td>
+               
                     <%--            <td>--%>
                     <%--                <a class="btn btn-xs btn-info" href="/danhsachungtuyen?id=${finallbd.getId()}"> sửa</a>--%>
                     <%--                <a class="btn btn-xs btn-danger" href="/deletehoso?id=${finallbd.getId()}">xóa</a>--%>
@@ -123,9 +118,7 @@ Ky Nang
                 <td >${kynang.getKyNangCM()}</td>
                 <td >${kynang.getMucDo()}</td>
                 <td >${kynang.getMoTa()}</td>
-                <td >
-                <a class="btn btn-xs btn-danger" href="/deletekynang?id=${kynang.getMaKyNang()}">xóa</a>
-                </td>
+               
                     <%--            <td>--%>
                     <%--                <a class="btn btn-xs btn-info" href="/danhsachungtuyen?id=${finallbd.getId()}"> sửa</a>--%>
                     <%--                <a class="btn btn-xs btn-danger" href="/deletehoso?id=${finallbd.getId()}">xóa</a>--%>
