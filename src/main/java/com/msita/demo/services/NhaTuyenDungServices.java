@@ -93,6 +93,9 @@ public class NhaTuyenDungServices {
     {
         return baiDangRepository.searchByNameLike2( Name);
     }
+   public HoSoUngTuyen finid(Long id){
+        return  hsRepository.finallbycc(id);
+   }
     public List<Baidang> search3(String mann)
     {
         return baiDangRepository.searchByNameLike3( mann);

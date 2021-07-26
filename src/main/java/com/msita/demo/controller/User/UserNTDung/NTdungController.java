@@ -258,5 +258,18 @@ public class NTdungController extends BaseController {
         model.addAttribute("ungvien",ungViens);
         return "xemcv";
     }
+    @GetMapping("/duyet")
+    public  String duyet(@RequestParam("id") Long id){
+        HoSoUngTuyen hoSoUngTuyen = nhaTuyenDungServices.finid(id);
+        if(hoSoUngTuyen.getTinhTrang().equals("Chưa duyệt")){
+           hoSoUngTuyen.setTinhTrang("Đã duyệt");
+            ungVienServices.save1(hoSoUngTuyen);
+        }
+        else {
+            hoSoUngTuyen.setTinhTrang("Chưa duyệt");
+            ungVienServices.save1(hoSoUngTuyen);
+        }
+        return "redirect:/danhsachungtuyen?id="+hoSoUngTuyen.getMaBaiDang();
+    }
 
     }

@@ -26,4 +26,6 @@ public interface HSRepository extends JpaRepository<HoSoUngTuyen,Long> {
     @Modifying
     @Query("DELETE  FROM HoSoUngTuyen m WHERE  m.MaBaiDang = :mabd")
     void deleteHoSoUngTuyenByMaBaiDang( @Param("mabd") String mabd);
+    @Query("SELECT m FROM HoSoUngTuyen m WHERE  m.id = :mabd")
+   HoSoUngTuyen finallbycc( @Param("mabd") Long mabd);
 }

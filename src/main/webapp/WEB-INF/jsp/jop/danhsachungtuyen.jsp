@@ -11,7 +11,6 @@
         <thead>
         <tr>
             <th scope="col">id</th>
-            <th scope="col">MaBaiDang</th>
             <th scope="col">MaUngVien</th>
             <th scope="col">NgayDangKy</th>
             <th scope="col">TinhTrang</th>
@@ -23,14 +22,25 @@
         <c:forEach items="${finlistuv}" var="finalluv" varStatus="i" begin="0" end="100">
             <tr>
                 <td >${i.index+1}</td>
-                <td>${finalluv.getMaBaiDang()}</td>
                 <td>${finalluv.getMaUngVien()}</td>
                 <td>${finalluv.getNgayDangKy()}</td>
                 <td>${finalluv.getTinhTrang()}</td>
                 <td>${finalluv.getFileCV()}</td>
+
+                <td>
+                    <c:if test="${finalluv.getTinhTrang() == 'Chưa duyệt'}">
+                    <a class="btn btn-xs btn-info" href="/duyet?id=${finalluv.getId()}">Duyệt</a>
+                    </c:if>
+                    <c:if test="${finalluv.getTinhTrang() != 'Chưa duyệt'}">
+                    <a class="btn btn-xs btn-info" href="/duyet?id=${finalluv.getId()}">Hủy duyệt</a>
+                    </c:if>
+                </td>
                 <td>
                     <a class="btn btn-xs btn-info" href="/xemcv?id=${finalluv.getMaUngVien()}">xem</a>
+                </td>
+                <td>
                     <a class="btn btn-xs btn-danger" href="/deletehoso?id=${finalluv.getId()}">xóa</a>
+
                 </td>
             </tr>
 

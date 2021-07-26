@@ -28,6 +28,7 @@
             <td>${finalluv.getNgayDangKy()}</td>
             <td>${finalluv.getTinhTrang()}</td>
             <td>${finalluv.getFileCV()}</td>
+
             <td>
                 <a class="btn btn-xs btn-info" href="/edithoso?id=${finalluv.getId()}"> sửa</a>
                 <a class="btn btn-xs btn-danger" href="/deletehoso?id=${finalluv.getId()}">xóa</a>
