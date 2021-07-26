@@ -27,7 +27,6 @@ public class HocVan {
     private String TrinhDo;
     @NotBlank
     private String MoTa;
-    @NotBlank
     private String MaUngien;
 //    @ManyToOne
 //    @JoinColumn(name = "MaUngien")
