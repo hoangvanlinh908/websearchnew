@@ -24,7 +24,7 @@
                 </div>
                 <ul class="btns">
                     <li><a href="#"><span class="lnr lnr-heart"></span></a></li>
-                    <li><a href="#">Apply</a></li>
+                    <li><a href="/nophoso?id=${deltail.getMaBaiDang()}">Apply</a></li>
                 </ul>
             </div>
             <p>
