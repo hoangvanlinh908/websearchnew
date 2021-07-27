@@ -23,11 +23,11 @@ public class KinhNghiem {
     private Integer  KinhNghiem;
     @Min(1)
     private Integer SoNam ;
-    @NotBlank
+    @NotBlank(message = "không được để trống")
     private String CapBacHienTai;
-    @NotBlank
+    @NotBlank(message = "không được để trống")
     private String CongTy;
-    @NotBlank
+    @NotBlank(message = "không được để trống")
     private String ChucVu;
 
     @Temporal(TemporalType.DATE)
@@ -37,7 +37,7 @@ public class KinhNghiem {
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date ThoiGianKT;
-    @NotBlank
+    @NotBlank(message = "không được để trống")
     private String MoTaCV;
     private String MaUngien;
 //    @ManyToOne

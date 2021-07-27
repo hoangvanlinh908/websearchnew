@@ -16,11 +16,11 @@ public class KyNang {
     @GeneratedValue(generator = "my_generator")
     @GenericGenerator(name = "my_generator", strategy = "com.msita.demo.controller.MyGeneratorKN")
     private String  MaKyNang;
-    @NotBlank
+    @NotBlank(message = "không được để trống")
     private String KyNangCM;
     @Min(1)
     private Integer MucDo;
-    @NotBlank
+    @NotBlank(message = "không được để trống")
     private String MoTa;
     private String MaUngien;
 //    @ManyToOne

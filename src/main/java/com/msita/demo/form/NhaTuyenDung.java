@@ -6,6 +6,8 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Positive;
+import javax.validation.constraints.Size;
 
 
 @Entity
@@ -20,19 +22,20 @@ public class NhaTuyenDung {
     private String MaNhaTuyenDung;
     @Email
     private String Email;
-    @NotBlank
+    @NotBlank(message = "không được để trống")
     private String MatKhau;
-    @NotBlank
+    @NotBlank(message = "không được để trống")
     private String TenCongTy;
-    @NotBlank
+    @NotBlank(message = "không được để trống")
     private String LinhVuc;
-    @NotBlank
+    @NotBlank(message = "không được để trống")
     private String SoLuoc;
-    @NotBlank
+    @NotBlank(message = "không được để trống")
     private String DiaChi;
-    @NotBlank
+    @Positive(message = "nhập số")
+    @Size(min = 12,max = 12 ,message = "mã số thuế 12 số")
     private String MaSoThue;
-    @NotBlank
+    @NotBlank(message = "không được để trống")
     private String DoiTuong;
     private String XacMinh;
     private String TinhTrang;

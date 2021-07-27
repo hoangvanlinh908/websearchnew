@@ -29,19 +29,19 @@ public class BaidangForm {
     @Min(1)
     @Column(name = "SLTuyenDung")
     private Integer SLTuyenDung;
-    @NotBlank
+    @NotBlank(message = "không được để trống")
     @Column(name = "TinhChat")
     private String TinhChat;
-    @NotBlank
+    @NotBlank(message = "không được để trống")
     @Column(name = "MucLuong")
     private String MucLuong;
-    @NotBlank
+    @NotBlank(message = "không được để trống")
     @Column(name = "DiaChiLamViec")
     private String DiaChiLamViec;
-    @NotBlank
+    @NotBlank(message = "không được để trống")
     @Column(name = "TieuChi")
     private String TieuChi;
-    @NotBlank
+    @NotBlank(message = "không được để trống")
     @Column(name = "ChiTietCV")
     private String ChiTietCV;
 

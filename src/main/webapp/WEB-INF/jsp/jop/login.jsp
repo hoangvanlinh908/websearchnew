@@ -13,7 +13,7 @@
             <input name="Email" placeholder="Email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common-input mb-20 form-control" required="" type="text">
 
             <input name="MatKhau" placeholder="passwork"  class="common-input mb-20 form-control" required="" type="password">
-            <h2 style="color: red"> ${errorMessage}</h2>
+            <p style="color: red"> ${errorMessage}</p>
             <a href="/register"> Đăng ký nhà tuyển dụng</a>
             <button class="primary-btn mt-20 text-white" style="float: right;">Đăng Nhập</button>
 

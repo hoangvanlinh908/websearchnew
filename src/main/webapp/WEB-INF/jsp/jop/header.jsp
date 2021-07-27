@@ -87,12 +87,12 @@
                     </c:if>
 
                     <c:if test="${text == null && textUV == null }">
-                    <li><a style="margin-right: 10px;" class="ticker-btn" href="/home">Signup</a>
+                    <li><a style="margin-right: 10px;" class="ticker-btn" >Signup</a>
                         <ul>
                             <li><a href="/register">Đăng Ký Nhà Tuyển dụng </a></li>
                             <li><a href="/registerUv">Đăng Ký Ứng viên</a></li>
                         </ul></li>
-                    <li><a style="margin-right: 10px;" class="ticker-btn" href="/home">Login</a>
+                    <li><a style="margin-right: 10px;" class="ticker-btn" >Login</a>
                         <ul>
                             <li><a  href="/login">Nhà Tuyển dụng </a></li>
                             <li><a href="/loginUv">Ứng viên</a></li>

@@ -46,12 +46,12 @@ public class NTdungController extends BaseController {
         String MatKhau =loginNTD.getMatKhau();
 
         if (Email == null || MatKhau == null) {
-            model.addAttribute("errorMessage", "Please enter the username and password fields");
+            model.addAttribute("errorMessage", "xin nhập email và mật khẩu ");
             return "login";
         }
         String loginFormUser = nhaTuyenDungServices.getlogin(Email, MatKhau);
         if (loginFormUser == null) {
-            model.addAttribute("errorMessage", "Username or password is invalid");
+            model.addAttribute("errorMessage", "tài khoản và mật khẩu không đúng");
             return "login";
         }
         session.removeAttribute("loginFormUserUV");

@@ -17,19 +17,19 @@ public class HocVan {
     @GeneratedValue(generator = "my_generator")
     @GenericGenerator(name = "my_generator", strategy = "com.msita.demo.controller.MyGeneratorHV")
     private String MaHocVan;
-    @NotBlank
+    @NotBlank(message = "không được để trống")
     private String BangCap;
-    @NotBlank
+    @NotBlank(message = "không được để trống")
     private String Truong;
 
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date ThoiGianTN;
-    @NotBlank
+    @NotBlank(message = "không được để trống")
     private String  NgoaiNgu;
-    @NotBlank
+    @NotBlank(message = "không được để trống")
     private String TrinhDo;
-    @NotBlank
+    @NotBlank(message = "không được để trống")
     private String MoTa;
     private String MaUngien;
 //    @ManyToOne

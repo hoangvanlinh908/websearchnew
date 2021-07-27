@@ -6,8 +6,7 @@ import org.hibernate.annotations.GenericGenerator;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.*;
 import java.util.Date;
 
 
@@ -21,25 +20,28 @@ public class UngVien {
     @GenericGenerator(name = "my_generator", strategy = "com.msita.demo.controller.MyGeneratorUV")
 
     private String MaUngVien;
-    @NotBlank
+    @NotBlank(message = "không được để trống")
     private String Hoten;
     @Email
     private String Email;
-    @NotBlank
+    @NotBlank(message = "không được để trống")
     private String MatKhau;
-    @NotBlank
+    @NotBlank(message = "không được để trống")
+    @Positive(message = "nhập số")
+    @Size(min = 10,message = "lớn hơn 10 số")
     private String SDT;
-    @NotBlank
+    @Positive(message = "nhập số")
+    @Size(min = 9,max = 9 ,message = "số cmnd 9 số")
     private String CMND;
     private String GioiTinh;
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date NgaySinh;
-    @NotBlank
+    @NotBlank(message = "không được để trống")
     private String DiaChi;
-    @NotBlank
+    @NotBlank(message = "không được để trống")
     private String HonNhan;
-    @NotBlank
+    @NotBlank(message = "không được để trống")
     private String ThanhTich;
 
     public UngVien() {

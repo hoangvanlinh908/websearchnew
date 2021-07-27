@@ -40,12 +40,12 @@ public class UngVienController extends BaseController {
         String MatKhau =loginUV.getMatKhau();
 
         if (Email == null || MatKhau == null) {
-            model.addAttribute("errorMessage", "Please enter the username and password fields");
+            model.addAttribute("errorMessage", "xin nhập email và mật khẩu");
             return "loginUv";
         }
         String loginFormUser = ungVienServices.checkloginungvien(Email, MatKhau);
         if (loginFormUser == null) {
-            model.addAttribute("errorMessage", "Username or password is invalid");
+            model.addAttribute("errorMessage", "tài khoản và mật khẩu không đúng");
             return "loginUv";
         }
         session.setAttribute("loginFormUserUV", loginFormUser);

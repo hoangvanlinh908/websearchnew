@@ -114,87 +114,6 @@
         </div>
     </div>
 </header><!-- #header -->
-<section class="banner-area relative" id="home">
-    <div class="overlay overlay-bg"></div>
-    <div class="container">
-        <div class="row fullscreen d-flex align-items-center justify-content-center">
-            <div class="banner-content col-lg-12">
-                <h1 class="text-white">
-                    <span>Hơn 1500</span> việc làm được đăng tuần trước
-
-                </h1>
-                <form:form  class="serach-form-area" action="/search" method="post" modelAttribute="search">>
-                <div class="row justify-content-center form-wrap">
-                    <div class="col-lg-4 form-cols">
-                        <form:input path="TieuDe" cssClass="form-control" placeholder="TieuDe"/>
-
-                    </div>
-                    <div class="col-lg-3 form-cols">
-                        <div class="default-select" id="default-selects2">
-                            <form:select path="NganhNghe" cssClass="float-none">
-                                <option value="1">Tất cả các ngành nghề</option>
-                                <form:options  items="${listnn}" itemLabel="TenNganhNghe" itemValue="MaNganhNghe" />
-                            </form:select>
-
-                        </div>
-                    </div>
-                    <div class="col-lg-2 form-cols">
-                        <form:button type="submit" class="btn btn-info">
-                            <span class="lnr lnr-magnifier"></span> Search
-                        </form:button>
-                    </div>
-                </div>
-            </div>
-
-
-            </form:form>
-            <p class="text-white"> <span>Search by tags:</span> Tecnology, Business, Consulting, IT Company, Design, Development</p>
-        </div>
-    </div>
-    </div>
-</section>
-<!-- End banner Area -->
-
-<!-- Start features Area -->
-<section class="features-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-6">
-                <div class="single-feature">
-                    <h4>Đang tìm kiếm</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="single-feature">
-                    <h4>Đang áp dụng</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="single-feature">
-                    <h4>SBảo vệ</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="single-feature">
-                    <h4>Thông báo</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End features Area -->
 
 <!-- Start popular-post Area -->
 <section class="popular-post-area pt-100">
@@ -251,9 +170,3 @@
     <div class="container">
         <div class="row justify-content-center d-flex">
             <div class="col-lg-8 post-list">
-                <ul class="cat-list">
-                    <li><a href="#">Recent</a></li>
-                    <li><a href="#">Full Time</a></li>
-                    <li><a href="#">Intern</a></li>
-                    <li><a href="#">part Time</a></li>
-                </ul>

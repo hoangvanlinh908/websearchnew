@@ -3,7 +3,14 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<style>
+    input {
+        margin: 20px;
 
+    }
+
+
+</style>
 <!-- End banner Area -->
 <form:form class="form-area"  action="/edit" modelAttribute="nhatuyendung" method="post"  enctype="multipart/form-data">
     <h2 style="margin-left: 30%;">CHỉnh sửa nhà tuyển dụng</h2>
