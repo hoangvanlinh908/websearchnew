@@ -122,7 +122,7 @@ public class UngVienController extends BaseController {
         return "hoso";
     }
     @GetMapping("/deletehoso")
-    public String deletehoso(@RequestParam("id") Long id ,Model model,HttpSession session){
+    public String deletehososs(@RequestParam("id") String id ,Model model,HttpSession session){
         ungVienServices.deldetehs(id);
         return "redirect:/hoso";
     }

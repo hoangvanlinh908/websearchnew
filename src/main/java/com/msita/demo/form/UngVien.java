@@ -41,17 +41,6 @@ public class UngVien {
     private String HonNhan;
     @NotBlank
     private String ThanhTich;
-//    @OneToMany(mappedBy ="ungVien1",fetch = FetchType.EAGER)
-//    private List<HoSoUngTuyen> hoSoUngTuyens;
-//
-//    @OneToMany(mappedBy ="ungVien2",fetch = FetchType.EAGER)
-//    private List<KyNang> kyNangs;
-//
-//    @OneToMany(mappedBy ="ungVien3",fetch = FetchType.EAGER)
-//    private List<KinhNghiem> kinhNghiems;
-//    @OneToMany(mappedBy ="ungVien4",fetch = FetchType.EAGER)
-//    private List<HocVan> hocVans;
-
 
     public UngVien() {
 

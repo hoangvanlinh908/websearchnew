@@ -265,7 +265,7 @@ public class NTdungController extends BaseController {
         return "xemcv";
     }
     @GetMapping("/duyet")
-    public  String duyet(@RequestParam("id") Long id){
+    public  String duyet(@RequestParam("id") String id){
         HoSoUngTuyen hoSoUngTuyen = nhaTuyenDungServices.finid(id);
         if(hoSoUngTuyen.getTinhTrang().equals("Chưa duyệt")){
            hoSoUngTuyen.setTinhTrang("Đã duyệt");
@@ -277,5 +277,10 @@ public class NTdungController extends BaseController {
         }
         return "redirect:/danhsachungtuyen?id="+hoSoUngTuyen.getMaBaiDang();
     }
-
+    @GetMapping("/deletehoso1")
+    public String deletehososs(@RequestParam("id") String id ,Model model,HttpSession session){
+        HoSoUngTuyen hoSoUngTuyen = nhaTuyenDungServices.finid(id);
+        ungVienServices.deldetehs(id);
+        return "redirect:/danhsachungtuyen?id="+hoSoUngTuyen.getMaBaiDang();
+    }
     }

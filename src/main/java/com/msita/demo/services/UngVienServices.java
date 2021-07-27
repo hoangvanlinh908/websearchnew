@@ -43,7 +43,7 @@ private NganhNgher nganhNghe;
     public List<HoSoUngTuyen> finalluv(String mauv ){
         return  hsRepository.finallbyMA(mauv);
     }
-    public void  deldetehs(Long id){
+    public void  deldetehs(String id){
         hsRepository.deleteById(id);
     }
     public  void  savehocvan(HocVan hocVan){

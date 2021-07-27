@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Repository
-public interface HSRepository extends JpaRepository<HoSoUngTuyen,Long> {
+public interface HSRepository extends JpaRepository<HoSoUngTuyen,String> {
     @Query("SELECT m FROM HoSoUngTuyen m WHERE m.MaUngVien = :mauv")
     List<HoSoUngTuyen> finallbyMA(@Param("mauv") String mauv);
     @Query("SELECT m FROM HoSoUngTuyen m WHERE m.MaUngVien = :mauv and  m.MaBaiDang = :mabd")
@@ -27,5 +27,5 @@ public interface HSRepository extends JpaRepository<HoSoUngTuyen,Long> {
     @Query("DELETE  FROM HoSoUngTuyen m WHERE  m.MaBaiDang = :mabd")
     void deleteHoSoUngTuyenByMaBaiDang( @Param("mabd") String mabd);
     @Query("SELECT m FROM HoSoUngTuyen m WHERE  m.id = :mabd")
-   HoSoUngTuyen finallbycc( @Param("mabd") Long mabd);
+   HoSoUngTuyen finallbycc( @Param("mabd") String mabd);
 }

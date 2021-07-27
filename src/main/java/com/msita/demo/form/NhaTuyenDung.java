@@ -36,8 +36,6 @@ public class NhaTuyenDung {
     private String DoiTuong;
     private String XacMinh;
     private String TinhTrang;
-//    @OneToMany(mappedBy ="nhaTuyenDung",fetch = FetchType.EAGER)
-//    private List<Baidang> baidangs;
 
 
     public NhaTuyenDung(String maNhaTuyenDung, @javax.validation.constraints.Email String email, @NotBlank String matKhau, @NotBlank String tenCongTy, @NotBlank String linhVuc, @NotBlank String soLuoc, @NotBlank String diaChi, @NotBlank String maSoThue, @NotBlank String doiTuong) {

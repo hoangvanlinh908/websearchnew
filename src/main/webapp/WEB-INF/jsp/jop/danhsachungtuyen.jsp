@@ -39,7 +39,7 @@
                     <a class="btn btn-xs btn-info" href="/xemcv?id=${finalluv.getMaUngVien()}">xem</a>
                 </td>
                 <td>
-                    <a class="btn btn-xs btn-danger" href="/deletehoso?id=${finalluv.getId()}">xóa</a>
+                    <a class="btn btn-xs btn-danger" href="/deletehoso1?id=${finalluv.getId()}">xóa</a>
 
                 </td>
             </tr>

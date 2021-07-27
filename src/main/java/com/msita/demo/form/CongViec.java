@@ -13,18 +13,14 @@ public class CongViec {
 //    @GenericGenerator(name = "my_generator", strategy = "com.msita.demo.controller.MyGeneratorBD")
     @Column(name = "MaCongViec")
     private String MaCongViec;
-    @Column(name = "mabaidang")
-    private String mabaidang;
+    @Column(name = "MaNganhNghe")
+    private String MaNganhNghe;
     @Column(name = "TenCongViec")
     private String TenCongViec;
     public CongViec() {
 
     }
-    public CongViec(String maCongViec, String mabaidang, String tenCongViec) {
-        MaCongViec = maCongViec;
-        this.mabaidang = mabaidang;
-        TenCongViec = tenCongViec;
-    }
+
 
     public String getMaCongViec() {
         return MaCongViec;
@@ -34,13 +30,7 @@ public class CongViec {
         MaCongViec = maCongViec;
     }
 
-    public String getMabaidang() {
-        return mabaidang;
-    }
-
-    public void setMabaidang(String mabaidang) {
-        this.mabaidang = mabaidang;
-    }
+ 
 
     public String getTenCongViec() {
         return TenCongViec;

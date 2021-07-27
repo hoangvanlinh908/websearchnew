@@ -1,6 +1,7 @@
 package com.msita.demo.form;
 
 
+import org.hibernate.annotations.GenericGenerator;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -11,16 +12,12 @@ import java.util.Date;
 
 public class HoSoUngTuyen {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue(generator = "my_generator")
+    @GenericGenerator(name = "my_generator", strategy = "com.msita.demo.controller.MyGeneratorCC")
+
+    private String id;
     private String MaBaiDang;
     private String MaUngVien;
-//    @ManyToOne
-//    @JoinColumn(name = "MaBaiDang")
-//    private Baidang baidang;
-//    @ManyToOne
-//    @JoinColumn(name = "MaUngVien")
-//    private UngVien ungVien1;
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "MM/dd/yyyy")
     private Date NgayDangKy;
@@ -31,6 +28,15 @@ public class HoSoUngTuyen {
 
     }
 
+    public HoSoUngTuyen(String id, String maBaiDang, String maUngVien, Date ngayDangKy, String tinhTrang, String fileCV) {
+        this.id = id;
+        MaBaiDang = maBaiDang;
+        MaUngVien = maUngVien;
+        NgayDangKy = ngayDangKy;
+        TinhTrang = tinhTrang;
+        FileCV = fileCV;
+    }
+
     public HoSoUngTuyen(String maBaiDang, String maUngVien, Date ngayDangKy, String tinhTrang, String fileCV) {
         MaBaiDang = maBaiDang;
         MaUngVien = maUngVien;
@@ -39,11 +45,11 @@ public class HoSoUngTuyen {
         FileCV = fileCV;
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

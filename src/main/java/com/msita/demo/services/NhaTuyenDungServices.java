@@ -76,7 +76,7 @@ public class NhaTuyenDungServices {
     public List<HoSoUngTuyen> finallbd(String mabd ){
         return  hsRepository.finallbyMAbd(mabd);
     }
-    public void  deldetehs(Long id){
+    public void  deldetehs(String id){
         hsRepository.deleteById(id);
     }
     public void  deldetehsmabd(String id){
@@ -96,7 +96,7 @@ public class NhaTuyenDungServices {
     {
         return baiDangRepository.searchByNameLike2( Name);
     }
-   public HoSoUngTuyen finid(Long id){
+   public HoSoUngTuyen finid(String id){
         return  hsRepository.finallbycc(id);
    }
     public List<Baidang> search3(String mann)
