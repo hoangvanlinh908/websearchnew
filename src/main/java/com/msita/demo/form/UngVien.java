@@ -1,6 +1,7 @@
 package com.msita.demo.form;
 
 
+import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -32,7 +33,7 @@ public class UngVien {
     private String CMND;
     private String GioiTinh;
     @Temporal(TemporalType.DATE)
-    @DateTimeFormat(pattern = "MM/dd/yyyy")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date NgaySinh;
     @NotBlank
     private String DiaChi;

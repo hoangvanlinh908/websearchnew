@@ -4,8 +4,20 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <!-- End banner Area -->
+<H3>Thông Tin cá nhân</H3>
 
-Hoc Van
+<div class="col-lg-12 post-list">
+    <c:forEach items="${ungvien1}" var="ungvien" varStatus="i" begin="0" end="100">
+        <p>Tên: ${ungvien.getHoten()} </p>
+        <p>Email: ${ungvien.getEmail()} </p>
+        <p>SDT: ${ungvien.getSDT()} </p>
+        <p>CMND: ${ungvien.getCMND()} </p>
+        <p>GioiTinh: ${ungvien.getGioiTinh()} </p>
+        <p>NgaySinh: ${ungvien.getNgaySinh()} </p>
+        <p>Hôn nhân: ${ungvien.getHonNhan()} </p>
+    </c:forEach>
+</div>
+<h3>Học Vấn</h3>
 <div class="col-lg-12 post-list">
     <table class="table">
         <thead>
@@ -46,7 +58,7 @@ Hoc Van
         </tbody>
     </table>
 </div>
-Kinh nghiem
+<h3>Kinh Nghiệm</h3>
 <div class="col-lg-6 post-list">
     <table class="table">
         <thead>
@@ -91,7 +103,7 @@ Kinh nghiem
     </table>
 
 </div>
-Ky Nang
+<h3>Kỷ Năng</h3>
 <div class="col-lg-12 post-list">
     <table class="table">
         <thead>

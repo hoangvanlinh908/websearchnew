@@ -72,7 +72,7 @@
                         <li class="menu-has-children"><a href="">Thông tin</a>
 
                             <ul><li><a href="/hoso">Công việc đã nộp</a></li>
-                                <li><a href="/cv">Chỉnh sửa thông tin</a></li>
+                                <li><a href="/cv">Xem thông tin cá nhân</a></li>
                                 <li><a href="/home">Cập nhập cv</a>
                                     <ul>
                                         <li><a href="/hocvan">Học Vấn</a></li>

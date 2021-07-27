@@ -27,10 +27,14 @@
             <form:input path="ChucVu" cssClass="form-control" placeholder="ChucVu"/>
             <form:errors path="ChucVu"/>
             <h4>ThoiGianBD</h4>
-            <form:input path="ThoiGianBD" cssClass="form-control" placeholder="ThoiGianBD"/>
+            <input type="date" name="ThoiGianBD">
+            <form:errors path="ThoiGianBD"/>
+<%--            <form:input path="ThoiGianBD" cssClass="form-control" placeholder="ThoiGianBD"/>--%>
 
             <h4>ThoiGianKT</h4>
-            <form:input path="ThoiGianKT" cssClass="form-control" placeholder="ThoiGianKT"/>
+            <input type="date" name="ThoiGianKT">
+            <form:errors path="ThoiGianKT"/>
+<%--            <form:input path="ThoiGianKT" cssClass="form-control" placeholder="ThoiGianKT"/>--%>
 
             <h4>MoTaCV</h4>
             <form:input path="MoTaCV" cssClass="form-control" placeholder="MoTaCV"/>

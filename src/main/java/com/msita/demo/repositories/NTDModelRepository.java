@@ -14,4 +14,6 @@ public interface NTDModelRepository extends JpaRepository<NhaTuyenDungModel,Stri
 
     @Query("SELECT m FROM NhaTuyenDungModel m WHERE m.MaNhaTuyenDung = :title")
     NhaTuyenDungModel finallbyMA(@Param("title") String title);
+    @Query("SELECT m FROM NhaTuyenDungModel m WHERE m.Email = :title")
+    NhaTuyenDungModel finallbyemail(@Param("title") String title);
 }

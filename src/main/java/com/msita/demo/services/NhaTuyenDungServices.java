@@ -56,6 +56,9 @@ public class NhaTuyenDungServices {
     public NhaTuyenDungModel finallByidntd(String ma){
         return ntdModelRepository.finallbyMA(ma);
     }
+    public NhaTuyenDungModel finallByidemail(String ma){
+        return ntdModelRepository.finallbyemail(ma);
+    }
 
     public List<NhaTuyenDung> finbyidntd(String ma){
         return  ntdRepository.findAllById(Collections.singleton(ma));

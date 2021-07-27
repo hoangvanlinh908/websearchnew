@@ -14,6 +14,7 @@
             <h4>Email</h4>
             <form:input path="Email" cssClass="form-control" placeholder="Email"/>
             <form:errors path="Email"/>
+            <p style="color: red;">${msss}</p>
             <h4>MatKhau</h4>
             <form:input path="MatKhau" cssClass="form-control" placeholder="MatKhau"/>
             <form:errors path="MatKhau"/>
@@ -32,7 +33,7 @@
             Giới tính khác <form:radiobutton path="GioiTinh" value="Giới tính khác"/>
             <form:errors path="GioiTinh"/>
             <h4>NgaySinh</h4>
-            <form:input path="NgaySinh" cssClass="form-control" placeholder="NgaySinh"/>
+            <input type="date" name="NgaySinh">
             <form:errors path="NgaySinh"/>
             <h4>DiaChi</h4>
             <form:input path="DiaChi" cssClass="form-control" placeholder="DiaChi"/>

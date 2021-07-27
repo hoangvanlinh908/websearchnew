@@ -18,7 +18,8 @@
             <form:input path="Truong" cssClass="form-control" placeholder="Truong"/>
             <form:errors path="Truong"/>
             <h4>THời gian tốt nghiệp</h4>
-            <form:input  path="ThoiGianTN" cssClass="form-control" placeholder="ThoiGianTN"/>
+<%--            <form:input  path="ThoiGianTN" cssClass="form-control" placeholder="ThoiGianTN"/>--%>
+            <input type="date" name="ThoiGianTN">
 
             <h4>Ngoại ngữ</h4>
             <form:input path="NgoaiNgu" cssClass="form-control" placeholder="NgoaiNgu"/>

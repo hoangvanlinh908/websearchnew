@@ -1,6 +1,8 @@
 package com.msita.demo.form;
 
+import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -20,6 +22,8 @@ public class HocVan {
     @NotBlank
     private String Truong;
 
+    @Temporal(TemporalType.DATE)
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date ThoiGianTN;
     @NotBlank
     private String  NgoaiNgu;

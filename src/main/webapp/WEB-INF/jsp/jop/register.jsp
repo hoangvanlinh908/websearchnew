@@ -14,6 +14,7 @@
             <h4>Email</h4>
             <form:input path="Email" cssClass="form-control" placeholder="Email"/>
             <form:errors path="Email"/>
+            <p style="color: red;">${mss}</p>
             <h4>MatKhau</h4>
             <form:input path="MatKhau" cssClass="form-control" placeholder="MatKhau"/>
             <form:errors path="MatKhau"/>

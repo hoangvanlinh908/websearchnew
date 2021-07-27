@@ -1,7 +1,6 @@
 package com.msita.demo.services;
 
 import com.msita.demo.form.*;
-import com.msita.demo.models.BaidangModel;
 import com.msita.demo.models.UngVienModel;
 import com.msita.demo.repositories.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -83,5 +82,8 @@ private NganhNgher nganhNghe;
     }
     public List<UngVien> finungvien (String id){
        return uvRepository.findAllById(Collections.singleton(id));
+    }
+    public String finemail(String email){
+        return uvRepository.quyery2(email);
     }
 }

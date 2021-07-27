@@ -75,6 +75,12 @@ public class NTdungController extends BaseController {
             return "register";
         }
         String email = nhaTuyenDung.getEmail();
+        NhaTuyenDungModel nhaTuyenDung1 = nhaTuyenDungServices.finallByidemail(email);
+        if (nhaTuyenDung1 != null)
+        {
+            model.addAttribute("mss","tài khoản email đã tồn tại");
+            return "register";
+        }
         String MatKhau = nhaTuyenDung.getMatKhau();
         String TenCongTy = nhaTuyenDung.getTenCongTy();
         String LinhVuc = nhaTuyenDung.getLinhVuc();

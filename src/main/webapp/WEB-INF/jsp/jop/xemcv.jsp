@@ -5,7 +5,7 @@
 
 <h3>Thông tin ứng viên</h3>
 <!-- End banner Area -->
-Thông tin cá nhân
+      <p style="color: #0b0b0b">Thông tin cá nhân</p>
 
 <div class="col-lg-12 post-list">
 <c:forEach items="${ungvien}" var="ungvien" varStatus="i" begin="0" end="100">
@@ -18,7 +18,7 @@ Thông tin cá nhân
     <p>Hôn nhân: ${ungvien.getHonNhan()} </p>
 </c:forEach>
 </div>
-Hoc Van
+<p style="color: #0b0b0b">Học Vấn</p>
 <div class="col-lg-12 post-list">
     <table class="table">
         <thead>
@@ -59,7 +59,7 @@ Hoc Van
         </tbody>
     </table>
 </div>
-Kinh nghiem
+<p style="color: #0b0b0b">Kinh nghiệm</p>
 <div class="col-lg-6 post-list">
     <table class="table">
         <thead>
@@ -104,7 +104,7 @@ Kinh nghiem
     </table>
 
 </div>
-Ky Nang
+<p style="color: #0b0b0b">Kỷ năng</p>
 <div class="col-lg-12 post-list">
     <table class="table">
         <thead>
@@ -112,9 +112,6 @@ Ky Nang
             <th scope="col">KyNangCM</th>
             <th scope="col">MucDo</th>
             <th scope="col">MoTa</th>
-
-
-
         </tr>
         </thead>
         <tbody>

@@ -67,6 +67,12 @@ public class UngVienController extends BaseController {
             return "registerUv";
         }
         String email = ungVien.getEmail();
+        String e = ungVienServices.finemail(email);
+        if (e != null)
+        {
+            model.addAttribute("msss","tài khoản email đã tồn tại");
+            return "registerUv";
+        }
         String MatKhau = ungVien.getMatKhau();
         String Hoten = ungVien.getHoten();
         String  SDT= ungVien.getSDT();
@@ -235,9 +241,11 @@ public class UngVienController extends BaseController {
         List<HocVan> hocVans = ungVienServices.finhocvan(MaUngien);
         List<KinhNghiem> kinhNghiems = ungVienServices.finKinhNghiem(MaUngien);
         List<KyNang> kyNangs = ungVienServices.finKyNang(MaUngien);
+        List<UngVien> ungViens = ungVienServices.finungvien(MaUngien);
         model.addAttribute("listhocvan",hocVans);
         model.addAttribute("listkinhnghiem",kinhNghiems);
         model.addAttribute("listkynghiem",kyNangs);
+        model.addAttribute("ungvien1",ungViens);
         return "cv";
     }
 
