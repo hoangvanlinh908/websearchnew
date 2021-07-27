@@ -117,7 +117,7 @@
         </tr>
         </thead>
         <tbody>
-        <c:forEach items="${listkynghiem}" var="kynang" varStatus="i" begin="0" end="100">
+        <c:forEach items="${listkynang}" var="kynang" varStatus="i" begin="0" end="100">
             <tr>
                 <td >${kynang.getKyNangCM()}</td>
                 <td >${kynang.getMucDo()}</td>

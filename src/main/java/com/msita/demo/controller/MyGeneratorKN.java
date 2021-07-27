@@ -8,7 +8,7 @@ import java.io.Serializable;
 import java.util.stream.Stream;
 
 public class MyGeneratorKN implements IdentifierGenerator {
-    private String prefix = "UV";
+    private String prefix = "KY";
     @Override
     public Serializable generate(SharedSessionContractImplementor session, Object obj) throws HibernateException {
         String query = "SELECT e.id FROM KyNang e";

@@ -29,9 +29,11 @@ public class KinhNghiem {
     private String CongTy;
     @NotBlank
     private String ChucVu;
+
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date ThoiGianBD;
+
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date ThoiGianKT;

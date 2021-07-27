@@ -69,7 +69,7 @@ private NganhNgher nganhNghe;
     }
     @Transactional
     public List<KyNang> finKyNang(String ma ){
-        return kyNangRepository.findAllById(Collections.singleton(ma));
+        return kyNangRepository.finallbykynang(ma);
     }
     public void  deldete1(String id){
         hocVanRepository.deleteById(id);

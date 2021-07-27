@@ -213,7 +213,6 @@ public class UngVienController extends BaseController {
             return "redirect:/loginUv";
         }
         if (bindingResult.hasErrors())  {
-
             return "kinhnghiem";
         }
         int KinhNghiem= kinhNghiem.getKinhNghiem();
@@ -225,10 +224,7 @@ public class UngVienController extends BaseController {
         Date ThoiGianKT= kinhNghiem.getThoiGianKT() ;
         String MoTaCV= kinhNghiem.getMoTaCV() ;
         ungVienServices.saveKinhNghiem(new KinhNghiem(KinhNghiem,SoNam,CapBacHienTai,CongTy,ChucVu,ThoiGianBD,ThoiGianKT,MoTaCV,MaUngien));
-
-
-
-
+        
         return "redirect:/home";
     }
     @GetMapping("/cv")
@@ -244,7 +240,7 @@ public class UngVienController extends BaseController {
         List<UngVien> ungViens = ungVienServices.finungvien(MaUngien);
         model.addAttribute("listhocvan",hocVans);
         model.addAttribute("listkinhnghiem",kinhNghiems);
-        model.addAttribute("listkynghiem",kyNangs);
+        model.addAttribute("listkynang",kyNangs);
         model.addAttribute("ungvien1",ungViens);
         return "cv";
     }
