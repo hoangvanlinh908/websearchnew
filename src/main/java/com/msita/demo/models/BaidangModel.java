@@ -57,7 +57,27 @@ public class BaidangModel {
 
     }
 
-    public BaidangModel( String tieuDe, Date ngayDang, Integer SLTuyenDung, String tinhChat, String mucLuong, String diaChiLamViec, String tieuChi, String chiTietCV, String hinhAnh, String maNhaTuyenDung, String maNganhNghe) {
+    public BaidangModel(String maBaiDang) {
+        MaBaiDang = maBaiDang;
+    }
+
+    public BaidangModel(String maBaiDang, String tieuDe, Date ngayDang, Integer SLTuyenDung, String tinhChat, String mucLuong, String diaChiLamViec, String tieuChi, String chiTietCV, String hinhAnh, String maNhaTuyenDung, String maNganhNghe) {
+        MaBaiDang = maBaiDang;
+        TieuDe = tieuDe;
+        NgayDang = ngayDang;
+        this.SLTuyenDung = SLTuyenDung;
+        TinhChat = tinhChat;
+        MucLuong = mucLuong;
+        DiaChiLamViec = diaChiLamViec;
+        TieuChi = tieuChi;
+        ChiTietCV = chiTietCV;
+        HinhAnh = hinhAnh;
+
+        MaNhaTuyenDung = maNhaTuyenDung;
+        MaNganhNghe = maNganhNghe;
+    }
+
+    public BaidangModel(String tieuDe, Date ngayDang, Integer SLTuyenDung, String tinhChat, String mucLuong, String diaChiLamViec, String tieuChi, String chiTietCV, String hinhAnh, String maNhaTuyenDung, String maNganhNghe) {
 
         TieuDe = tieuDe;
         NgayDang = ngayDang;

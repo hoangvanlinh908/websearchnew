@@ -141,6 +141,82 @@ public class NTdungController extends BaseController {
 
         return "redirect:/home";
     }
+    @GetMapping("/editbd")
+    public  String editbd(@RequestParam("id") String id,Model model,HttpSession session){
+        String mantd = (String) session.getAttribute("loginFormUser");
+
+        if (mantd == null) {
+            return "redirect:/login";
+        }
+        model.addAttribute(("nganhnghe"),nhaTuyenDungServices.finallNN());
+        BaidangModel baidang = nhaTuyenDungServices.finbymabd(id);
+        String MaBaiDang= baidang.getMaBaiDang();
+        String TieuDe = baidang.getTieuDe();
+        Date NgayDang = baidang.getNgayDang();
+        int SLTuyenDung = baidang.getSLTuyenDung();
+        String  TinhChat= baidang.getTinhChat();
+        String MucLuong = baidang.getMucLuong();
+        String DiaChiLamViec = baidang.getDiaChiLamViec();
+        String TieuChi = baidang.getTieuChi();
+        String ChiTietCV = baidang.getChiTietCV();
+        String HinhAnh = baidang.getHinhAnh();
+        String MaNganhNghe = baidang.getMaNganhNghe();
+        String MaNhaTuyenDung = baidang.getMaNhaTuyenDung();
+        model.addAttribute("editbd",new BaidangModel(MaBaiDang,TieuDe, NgayDang, SLTuyenDung, TinhChat, MucLuong, DiaChiLamViec, TieuChi, ChiTietCV, HinhAnh, MaNhaTuyenDung, MaNganhNghe));
+        return "editbd";
+    }
+    @PostMapping("/editbd")
+    public String editbaidang(@ModelAttribute("editbd") BaidangForm baidang,BindingResult bindingResult,@RequestParam("HinhAnh") MultipartFile hinhanh, HttpSession session,Model model) throws IOException{
+        String MaBaiDang= baidang.getMaBaiDang();
+        baidang.setMaBaiDang(MaBaiDang);
+        String TieuDe = baidang.getTieuDe();
+        baidang.setTieuDe(TieuDe);
+        Date NgayDang = new Date();
+        baidang.setNgayDang(NgayDang);
+        int SLTuyenDung = baidang.getSLTuyenDung();
+        baidang.setSLTuyenDung(SLTuyenDung);
+        String  TinhChat= baidang.getTinhChat();
+        baidang.setTinhChat(TinhChat);
+        String MucLuong = baidang.getMucLuong();
+        baidang.setMucLuong(MucLuong);
+        String DiaChiLamViec = baidang.getDiaChiLamViec();
+        baidang.setDiaChiLamViec(DiaChiLamViec);
+        String TieuChi = baidang.getTieuChi();
+        baidang.setTieuChi(TieuChi);
+        String ChiTietCV = baidang.getChiTietCV();
+        baidang.setChiTietCV(ChiTietCV);
+        String MaNganhNghe = baidang.getMaNganhNghe();
+        baidang.setMaNganhNghe(MaNganhNghe);
+        String loginNTD = (String) session.getAttribute("loginFormUser");
+        String MaNhaTuyenDung = loginNTD;
+        baidang.setMaNhaTuyenDung(MaNhaTuyenDung);
+        String HinhAnh = null;
+        if (hinhanh != null && !hinhanh.isEmpty()) {
+            HinhAnh = hinhanh.getOriginalFilename();
+            if (!HinhAnh.contains(".jpg") && !HinhAnh.contains(".png")) {
+                model.addAttribute("message", "Invalid image file");
+                return "editProduct";
+            }
+
+            BaidangModel baidangModel = nhaTuyenDungServices.finbymabd(baidang.getMaBaiDang());
+
+            Path  oldImagePath = Paths.get("src/main/resources/static/imgbd/" + baidangModel.getHinhAnh());
+            Files.delete(oldImagePath);
+
+            Path imagePath = Paths.get("src/main/resources/static/imgbd/" + HinhAnh);
+            Files.write(imagePath, hinhanh.getBytes());
+
+        }
+        if (HinhAnh == null  ){
+            nhaTuyenDungServices.save3(new BaidangForm(MaBaiDang,TieuDe, NgayDang, SLTuyenDung, TinhChat, MucLuong, DiaChiLamViec, TieuChi, ChiTietCV, MaNhaTuyenDung, MaNganhNghe));
+        }
+        else {
+            nhaTuyenDungServices.save2(new BaidangModel(MaBaiDang,TieuDe, NgayDang, SLTuyenDung, TinhChat, MucLuong, DiaChiLamViec, TieuChi, ChiTietCV, HinhAnh, MaNhaTuyenDung, MaNganhNghe));
+        }
+        return "redirect:/home";
+    }
+
+
     @GetMapping("/logout")
     public String loguot(HttpSession session){
 
@@ -150,7 +226,12 @@ public class NTdungController extends BaseController {
         return "redirect:/home";
     }
     @GetMapping("/edit-NTD")
-    public  String edit(@RequestParam("id") String id,Model model){
+    public  String edit(@RequestParam("id") String id,Model model,HttpSession session){
+        String mantd = (String) session.getAttribute("loginFormUser");
+
+        if (mantd == null) {
+            return "redirect:/login";
+        }
             List<NhaTuyenDungModel> nhaTuyenDung = nhaTuyenDungServices.finbyidntd1(id);
             String MaNhaTuyenDung = nhaTuyenDung.get(0).getMaNhaTuyenDung();
         String email = nhaTuyenDung.get(0).getEmail();

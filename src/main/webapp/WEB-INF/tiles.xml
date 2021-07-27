@@ -120,4 +120,9 @@
                 extends="client.definition">
         <put-attribute name="body" value="/WEB-INF/jsp/jop/xemcv.jsp" />
     </definition>
+    <definition name="editbd"
+                extends="client.definition2">
+        <put-attribute name="body" value="/WEB-INF/jsp/jop/editbd.jsp" />
+
+    </definition>
 </tiles-definitions>

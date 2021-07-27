@@ -1,9 +1,6 @@
 package com.msita.demo.services;
 
-import com.msita.demo.form.Baidang;
-import com.msita.demo.form.HoSoUngTuyen;
-import com.msita.demo.form.NganhNghe;
-import com.msita.demo.form.NhaTuyenDung;
+import com.msita.demo.form.*;
 import com.msita.demo.models.BaidangModel;
 import com.msita.demo.models.NhaTuyenDungModel;
 import com.msita.demo.repositories.*;
@@ -47,6 +44,11 @@ public class NhaTuyenDungServices {
        ntdModelRepository.save(nhaTuyenDung);
     }
     @Transactional
+    public void  save3(BaidangForm baidangForm){
+        baiDangRepositoryModel1.save(baidangForm);
+    }
+
+    @Transactional
     public void  save2(BaidangModel baidangModel){
         baiDangRepositoryModel.save(baidangModel);
     }
@@ -66,6 +68,10 @@ public class NhaTuyenDungServices {
     public List<NhaTuyenDungModel> finbyidntd1(String ma){
         return  ntdModelRepository.findAllById(Collections.singleton(ma));
     }
+    public  BaidangModel finbymabd(String mantd){
+        return baiDangRepositoryModel.finallbyMABD(mantd);
+    }
+
     public List<Baidang> finbyid(String id){
         return baiDangRepository.findAllById(Collections.singleton(id));
     }

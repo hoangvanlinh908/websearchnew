@@ -19,5 +19,6 @@ public interface BaiDangRepositoryModel extends JpaRepository<BaidangModel,Strin
     List<BaidangModel> searchByNameLike(@Param("title") String title);
     @Query("SELECT m FROM BaidangModel m WHERE m.MaNganhNghe = :MaNganhNghe and  m.TieuDe LIKE :title%")
     List<BaidangModel> searchByNameLike1(@Param("MaNganhNghe") String MaNganhNghe, @Param("title") String title);
-
+    @Query("SELECT m FROM BaidangModel m WHERE m.MaBaiDang = :title")
+    BaidangModel finallbyMABD(@Param("title") String title);
 }

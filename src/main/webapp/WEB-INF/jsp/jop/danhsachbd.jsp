@@ -41,7 +41,10 @@
             <td><img src="/imgbd/${finallbd.getHinhAnh()}" height="50px" width="50px"></td>
             <td>
             <a class="btn btn-xs btn-danger" href="/deletebd?id=${finallbd.getMaBaiDang()}">xóa</a>
+                <a class="btn btn-xs btn-info" style="margin-top: 10px" href="/editbd?id=${finallbd.getMaBaiDang()}">sửa</a>
+
             </td>
+
             <td>  <a class="btn btn-xs btn-info" href="/danhsachungtuyen?id=${finallbd.getMaBaiDang()}"> xem dánh sách ứng tuyển </a>
             </td>
 

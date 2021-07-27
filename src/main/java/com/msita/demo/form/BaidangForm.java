@@ -65,7 +65,20 @@ public BaidangForm() {
 
 }
 
-    public BaidangForm( String tieuDe, Date ngayDang, Integer SLTuyenDung, String tinhChat, String mucLuong, String diaChiLamViec, String tieuChi, String chiTietCV, String hinhAnh, String maNhaTuyenDung, String maNganhNghe) {
+    public BaidangForm(String maBaiDang, String tieuDe, Date ngayDang, Integer SLTuyenDung, String tinhChat, String mucLuong, String diaChiLamViec, String tieuChi, String chiTietCV, String maNhaTuyenDung, String maNganhNghe) {
+        MaBaiDang = maBaiDang;
+        TieuDe = tieuDe;
+        NgayDang = ngayDang;
+        this.SLTuyenDung = SLTuyenDung;
+        TinhChat = tinhChat;
+        MucLuong = mucLuong;
+        DiaChiLamViec = diaChiLamViec;
+        TieuChi = tieuChi;
+        ChiTietCV = chiTietCV;
+        MaNhaTuyenDung = maNhaTuyenDung;
+        MaNganhNghe = maNganhNghe;
+    }
+    public BaidangForm(String tieuDe, Date ngayDang, Integer SLTuyenDung, String tinhChat, String mucLuong, String diaChiLamViec, String tieuChi, String chiTietCV, String maNhaTuyenDung, String maNganhNghe) {
 
         TieuDe = tieuDe;
         NgayDang = ngayDang;
@@ -79,6 +92,7 @@ public BaidangForm() {
         MaNhaTuyenDung = maNhaTuyenDung;
         MaNganhNghe = maNganhNghe;
     }
+
     public String getMaBaiDang() {
         return MaBaiDang;
     }
