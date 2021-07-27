@@ -36,7 +36,7 @@ public class NhaTuyenDungServices {
     }
     @Transactional
     public  String getlogin(String email, String mtakhau){
-        return ntdRepository.quyery1(email,mtakhau);
+        return ntdRepository.quyery12(email,mtakhau);
     }
     @Transactional
     public void  save(NhaTuyenDung nhaTuyenDung){

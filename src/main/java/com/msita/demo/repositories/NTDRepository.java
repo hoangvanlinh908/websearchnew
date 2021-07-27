@@ -9,5 +9,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface NTDRepository extends JpaRepository<NhaTuyenDung,String> {
     @Query("SELECT u.MaNhaTuyenDung FROM NhaTuyenDung u WHERE u.Email = :email and u.MatKhau = :password")
-    String quyery1(String email, String password );
+    String quyery12(String email, String password );
 }
