@@ -6,6 +6,8 @@ import org.hibernate.annotations.GenericGenerator;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
 import java.util.Date;
 
 @Entity
@@ -17,22 +19,29 @@ public class BaidangModel {
     @GenericGenerator(name = "my_generator", strategy = "com.msita.demo.controller.MyGeneratorBD")
     private String MaBaiDang;
     @Column(name = "TieuDe")
+    @NotBlank(message = "không được để trống")
     private String TieuDe;
     @Column(name = "NgayDang")
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "MM/dd/yyyy")
     private Date NgayDang;
     @Column(name = "SLTuyenDung")
+    @Min(1)
     private Integer SLTuyenDung;
     @Column(name = "TinhChat")
+    @NotBlank(message = "không được để trống")
     private String TinhChat;
     @Column(name = "MucLuong")
+    @NotBlank(message = "không được để trống")
     private String MucLuong;
     @Column(name = "DiaChiLamViec")
+    @NotBlank(message = "không được để trống")
     private String DiaChiLamViec;
     @Column(name = "TieuChi")
+    @NotBlank(message = "không được để trống")
     private String TieuChi;
     @Column(name = "ChiTietCV")
+    @NotBlank(message = "không được để trống")
     private String ChiTietCV;
     @Column(name = "HinhAnh")
     private String HinhAnh;
@@ -72,7 +81,6 @@ public class BaidangModel {
         TieuChi = tieuChi;
         ChiTietCV = chiTietCV;
         HinhAnh = hinhAnh;
-
         MaNhaTuyenDung = maNhaTuyenDung;
         MaNganhNghe = maNganhNghe;
     }
@@ -88,7 +96,6 @@ public class BaidangModel {
         TieuChi = tieuChi;
         ChiTietCV = chiTietCV;
         HinhAnh = hinhAnh;
-
         MaNhaTuyenDung = maNhaTuyenDung;
         MaNganhNghe = maNganhNghe;
     }

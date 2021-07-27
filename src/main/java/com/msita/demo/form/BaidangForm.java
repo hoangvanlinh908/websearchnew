@@ -44,7 +44,6 @@ public class BaidangForm {
     @NotBlank(message = "không được để trống")
     @Column(name = "ChiTietCV")
     private String ChiTietCV;
-
     @Column(name = "TinhTrang")
     private String TinhTrang;
     @Column(name = "MaNhaTuyenDung")

@@ -166,7 +166,10 @@ public class NTdungController extends BaseController {
         return "editbd";
     }
     @PostMapping("/editbd")
-    public String editbaidang(@ModelAttribute("editbd") BaidangForm baidang,BindingResult bindingResult,@RequestParam("HinhAnh") MultipartFile hinhanh, HttpSession session,Model model) throws IOException{
+    public String editbaidang(@Valid @ModelAttribute("editbd") BaidangForm baidang,BindingResult bindingResult,@RequestParam("HinhAnh") MultipartFile hinhanh, HttpSession session,Model model) throws IOException{
+        if (bindingResult.hasErrors())  {
+            return "editbd";
+        }
         String MaBaiDang= baidang.getMaBaiDang();
         baidang.setMaBaiDang(MaBaiDang);
         String TieuDe = baidang.getTieuDe();

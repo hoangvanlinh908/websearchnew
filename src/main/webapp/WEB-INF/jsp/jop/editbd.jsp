@@ -4,7 +4,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <style>
-    input {
+    input ,textarea{
         margin: 20px;
 
     }
@@ -13,7 +13,7 @@
 </style>
 <!-- End banner Area -->
 <form:form class="form-area"  action="/editbd" modelAttribute="editbd" method="post"  enctype="multipart/form-data">
-    <h2 style="margin-left: 30%;">Đăng Bài</h2>
+    <h2 style="margin-left: 30%;">Chỉnh sửa bài đăng</h2>
     <div class="single-post d-flex flex-row">
 
         <div class="col-lg-12 form-group" style="margin: 0 auto;padding:50px;">
@@ -36,7 +36,7 @@
             <h4>DiaChiLamViec</h4>
             <form:input path="DiaChiLamViec" cssClass="form-control" placeholder="DiaChiLamViec"/>
             <form:errors path="DiaChiLamViec"/>
-            <h4>MaSoThue</h4>
+            <h4>TieuChi</h4>
             <form:input path="TieuChi" cssClass="form-control" placeholder="TieuChi"/>
             <form:errors path="TieuChi"/>
             <h4>ChiTietCV</h4>

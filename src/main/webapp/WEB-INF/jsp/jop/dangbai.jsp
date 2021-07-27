@@ -4,7 +4,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <style>
-    input {
+    input, textarea {
         margin: 20px;
 
     }
@@ -34,7 +34,7 @@
             <h4>DiaChiLamViec</h4>
             <form:input path="DiaChiLamViec" cssClass="form-control" placeholder="DiaChiLamViec"/>
             <form:errors path="DiaChiLamViec"/>
-            <h4>MaSoThue</h4>
+            <h4>TieuChi</h4>
             <form:input path="TieuChi" cssClass="form-control" placeholder="TieuChi"/>
             <form:errors path="TieuChi"/>
             <h4>ChiTietCV</h4>

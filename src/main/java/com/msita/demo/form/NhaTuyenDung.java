@@ -20,7 +20,8 @@ public class NhaTuyenDung {
     @GeneratedValue(generator = "my_generator")
     @GenericGenerator(name = "my_generator", strategy = "com.msita.demo.controller.MyGenerator")
     private String MaNhaTuyenDung;
-    @Email
+    @Email(message = "không được để trống @")
+    @NotBlank(message = "không được để trống")
     private String Email;
     @NotBlank(message = "không được để trống")
     private String MatKhau;

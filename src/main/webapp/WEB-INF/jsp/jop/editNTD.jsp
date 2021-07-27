@@ -17,9 +17,9 @@
     <div class="single-post d-flex flex-row">
 
         <div class="col-lg-12 form-group" style="margin: 0 auto;padding:50px;">
-            <form:input path="MaNhaTuyenDung" cssClass="form-control" placeholder="MaNhaTuyenDung"/>
+            <form:hidden path="MaNhaTuyenDung" cssClass="form-control" placeholder="MaNhaTuyenDung"/>
             <h4>Email</h4>
-            <form:input path="Email" cssClass="form-control" placeholder="Email"/>
+            <form:input readonly="false" path="Email" cssClass="form-control" placeholder="Email"/>
             <form:errors path="Email"/>
             <h4>MatKhau</h4>
             <form:input path="MatKhau" cssClass="form-control" placeholder="MatKhau"/>
