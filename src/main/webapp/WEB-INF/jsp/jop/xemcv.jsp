@@ -64,8 +64,6 @@
     <table class="table">
         <thead>
         <tr>
-
-            <th scope="col">KinhNghiem</th>
             <th scope="col">SoNam</th>
             <th scope="col">CapBacHienTai</th>
             <th scope="col">CongTy</th>
@@ -81,7 +79,6 @@
         <tbody>
         <c:forEach items="${listkinhnghiem1}" var="kinhnghiem" varStatus="i" begin="0" end="100">
             <tr>
-                <td>${kinhnghiem.getKinhNghiem()}</td>
                 <td>${kinhnghiem.getSoNam()}</td>
                 <td>${kinhnghiem.getCapBacHienTai()}</td>
                 <td>${kinhnghiem.getCongTy()}</td>

@@ -215,7 +215,8 @@ public class UngVienController extends BaseController {
         if (bindingResult.hasErrors())  {
             return "kinhnghiem";
         }
-        int KinhNghiem= kinhNghiem.getKinhNghiem();
+
+
         int SoNam= kinhNghiem.getSoNam() ;
         String CapBacHienTai= kinhNghiem.getCapBacHienTai() ;
         String CongTy= kinhNghiem.getCongTy() ;
@@ -223,7 +224,7 @@ public class UngVienController extends BaseController {
         Date ThoiGianBD= kinhNghiem.getThoiGianBD() ;
         Date ThoiGianKT= kinhNghiem.getThoiGianKT() ;
         String MoTaCV= kinhNghiem.getMoTaCV() ;
-        ungVienServices.saveKinhNghiem(new KinhNghiem(KinhNghiem,SoNam,CapBacHienTai,CongTy,ChucVu,ThoiGianBD,ThoiGianKT,MoTaCV,MaUngien));
+        ungVienServices.saveKinhNghiem(new KinhNghiem(SoNam,CapBacHienTai,CongTy,ChucVu,ThoiGianBD,ThoiGianKT,MoTaCV,MaUngien));
         
         return "redirect:/home";
     }

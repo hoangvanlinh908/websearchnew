@@ -11,9 +11,9 @@
 
         <div class="col-lg-12 form-group" style="margin: 0 auto;padding:50px;">
 
-            <h4>KinhNghiem</h4>
-            <form:input path="KinhNghiem" cssClass="form-control" placeholder="KinhNghiem"/>
-            <form:errors path="KinhNghiem"/>
+<%--            <h4>KinhNghiem</h4>--%>
+<%--            <form:input path="KinhNghiem" cssClass="form-control" placeholder="KinhNghiem"/>--%>
+<%--            <form:errors path="KinhNghiem"/>--%>
             <h4>SoNam</h4>
             <form:input path="SoNam" cssClass="form-control" placeholder="SoNam"/>
             <form:errors path="SoNam"/>

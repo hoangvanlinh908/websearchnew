@@ -1,7 +1,6 @@
 package com.msita.demo.form;
 
 
-import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -19,8 +18,7 @@ public class KinhNghiem {
     @GeneratedValue(generator = "my_generator")
     @GenericGenerator(name = "my_generator", strategy = "com.msita.demo.controller.MyGeneratorKIN")
     private String MaKinhNghiem;
-    @Min(1)
-    private Integer  KinhNghiem;
+    private byte  KinhNghiem;
     @Min(1)
     private Integer SoNam ;
     @NotBlank(message = "không được để trống")
@@ -49,8 +47,18 @@ public class KinhNghiem {
 
     }
 
-    public KinhNghiem(Integer kinhNghiem, Integer soNam, String capBacHienTai, String congTy, String chucVu, Date thoiGianBD, Date thoiGianKT, String moTaCV, String maUngien) {
+    public KinhNghiem(byte kinhNghiem, Integer soNam, String capBacHienTai, String congTy, String chucVu, Date thoiGianBD, Date thoiGianKT, String moTaCV, String maUngien) {
         KinhNghiem = kinhNghiem;
+        SoNam = soNam;
+        CapBacHienTai = capBacHienTai;
+        CongTy = congTy;
+        ChucVu = chucVu;
+        ThoiGianBD = thoiGianBD;
+        ThoiGianKT = thoiGianKT;
+        MoTaCV = moTaCV;
+        MaUngien = maUngien;
+    }
+    public KinhNghiem( Integer soNam, String capBacHienTai, String congTy, String chucVu, Date thoiGianBD, Date thoiGianKT, String moTaCV, String maUngien) {
         SoNam = soNam;
         CapBacHienTai = capBacHienTai;
         CongTy = congTy;
@@ -69,11 +77,11 @@ public class KinhNghiem {
         MaKinhNghiem = maKinhNghiem;
     }
 
-    public Integer getKinhNghiem() {
+    public byte getKinhNghiem() {
         return KinhNghiem;
     }
 
-    public void setKinhNghiem(Integer kinhNghiem) {
+    public void setKinhNghiem(byte kinhNghiem) {
         KinhNghiem = kinhNghiem;
     }
 

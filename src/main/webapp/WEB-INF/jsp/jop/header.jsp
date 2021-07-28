@@ -76,7 +76,7 @@
                                 <li><a href="/home">Cập nhập cv</a>
                                     <ul>
                                         <li><a href="/hocvan">Học Vấn</a></li>
-                                        <li><a href="/kinhnghiem">Kính nghiệm</a></li>
+                                        <li><a href="/kinhnghiem">Kinh nghiệm</a></li>
                                         <li><a href="/kynang">Kỷ Năng</a></li>
                                     </ul>
 
