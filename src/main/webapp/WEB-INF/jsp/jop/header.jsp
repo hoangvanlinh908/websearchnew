@@ -114,7 +114,7 @@
         </div>
     </div>
 </header><!-- #header -->
-<section class="banner-area relative" id="home">
+<section class="banner-area relative" id="home" style="height: 500px;">
     <div class="overlay overlay-bg"></div>
     <div class="container">
         <div class="row fullscreen d-flex align-items-center justify-content-center">
