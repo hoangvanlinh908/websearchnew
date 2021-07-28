@@ -344,7 +344,7 @@ public class NTdungController extends BaseController {
         List<UngVien> ungViens = ungVienServices.finungvien(id);
         model.addAttribute("listhocvan1",hocVans);
         model.addAttribute("listkinhnghiem1",kinhNghiems);
-        model.addAttribute("listkynghiem1",kyNangs);
+        model.addAttribute("listkynang1",kyNangs);
         model.addAttribute("ungvien",ungViens);
         return "xemcv";
     }
