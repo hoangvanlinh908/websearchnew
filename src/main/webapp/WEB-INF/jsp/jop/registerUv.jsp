@@ -23,7 +23,7 @@
             <form:errors path="Email"/>
             <p style="color: red;">${msss}</p>
             <h4>MatKhau</h4>
-            <form:input path="MatKhau" cssClass="form-control" placeholder="MatKhau"/>
+            <input type="password" name="MatKhau" class="form-control" placeholder="MatKhau">
             <form:errors path="MatKhau"/>
             <h4>Hoten</h4>
             <form:input path="Hoten" cssClass="form-control" placeholder="Hoten"/>

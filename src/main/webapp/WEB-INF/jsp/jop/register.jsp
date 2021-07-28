@@ -23,13 +23,23 @@
             <form:errors path="Email"/>
             <p style="color: red;">${mss}</p>
             <h4>MatKhau</h4>
-            <form:input path="MatKhau" cssClass="form-control" placeholder="MatKhau"/>
+            <input type="password" name="MatKhau" class="form-control" placeholder="MatKhau">
+<%--            <form:input path="MatKhau" cssClass="form-control" placeholder="MatKhau"/>--%>
             <form:errors path="MatKhau"/>
             <h4>TenCongTy</h4>
             <form:input path="TenCongTy" cssClass="form-control" placeholder="TenCongTy"/>
             <form:errors path="TenCongTy"/>
             <h4>LinhVuc</h4>
-            <form:input path="LinhVuc" cssClass="form-control" placeholder="LinhVuc"/>
+            <div class="form-group" >
+
+                <div class="col-10" >
+
+                    <form:select path="LinhVuc" cssClass="float-none">
+                        <form:options  items="${nganhnghe}" itemLabel="TenNganhNghe" itemValue="MaNganhNghe" />
+                    </form:select>
+                </div>
+
+            </div>
             <form:errors path="LinhVuc"/>
             <h4>SoLuoc</h4>
             <form:input path="SoLuoc" cssClass="form-control" placeholder="SoLuoc"/>

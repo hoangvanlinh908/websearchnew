@@ -65,6 +65,7 @@ public class NTdungController extends BaseController {
         model.addAttribute("text",loginUser);
         model.addAttribute("text1",nhaTuyenDungServices.finallByidntd(loginUser));
         model.addAttribute("register",new NhaTuyenDungModel());
+        model.addAttribute(("nganhnghe"),nhaTuyenDungServices.finallNN());
         return "register";
 
     }
@@ -231,7 +232,7 @@ public class NTdungController extends BaseController {
     @GetMapping("/edit-NTD")
     public  String edit(@RequestParam("id") String id,Model model,HttpSession session){
         String mantd = (String) session.getAttribute("loginFormUser");
-
+        model.addAttribute(("nganhnghe"),nhaTuyenDungServices.finallNN());
         if (mantd == null) {
             return "redirect:/login";
         }
