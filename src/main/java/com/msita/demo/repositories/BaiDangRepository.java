@@ -12,9 +12,9 @@ import java.util.List;
 
 @Repository
 public interface BaiDangRepository extends JpaRepository<Baidang,String> {
-    @Query("SELECT m FROM Baidang m WHERE m.nganhNghe.MaNganhNghe = :MaNganhNghe and  m.TieuDe LIKE :title%")
+    @Query("SELECT m FROM Baidang m WHERE m.nganhNghe.MaNganhNghe = :MaNganhNghe and  LOWER(m.TieuDe) LIKE '%:title%' ")
     List<Baidang> searchByNameLike1(@Param("MaNganhNghe") String MaNganhNghe, @Param("title") String title);
-    @Query("SELECT m FROM Baidang m WHERE   m.TieuDe LIKE :title%")
+    @Query("SELECT m FROM Baidang m WHERE   LOWER(m.TieuDe) LIKE %:title%  ")
     List<Baidang> searchByNameLike2(@Param("title") String title);
     @Query("SELECT m FROM Baidang m WHERE m.nganhNghe.MaNganhNghe = :MaNganhNghe")
     List<Baidang> searchByNameLike3(@Param("MaNganhNghe") String MaNganhNghe);

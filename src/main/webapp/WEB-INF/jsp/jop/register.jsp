@@ -35,7 +35,7 @@
                 <div class="col-10" >
 
                     <form:select path="LinhVuc" cssClass="float-none">
-                        <form:options  items="${nganhnghe}" itemLabel="TenNganhNghe" itemValue="MaNganhNghe" />
+                        <form:options  items="${listnn}" itemLabel="TenNganhNghe" itemValue="MaNganhNghe" />
                     </form:select>
                 </div>
 

@@ -45,7 +45,7 @@
                 <h4 style="float: none;">MaNganhNghe</h4>
                 <div class="col-10" >
                     <form:select path="MaNganhNghe" cssClass="float-none">
-                        <form:options  items="${nganhnghe}" itemLabel="TenNganhNghe" itemValue="MaNganhNghe" />
+                        <form:options  items="${listnn}" itemLabel="TenNganhNghe" itemValue="MaNganhNghe" />
                     </form:select>
                 </div>
 

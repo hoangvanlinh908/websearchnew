@@ -65,7 +65,7 @@ public class WebSearchController extends BaseController {
         // Tạo Biến name lấy từ model search lấy name
         String name = search.getTieuDe();
         String nganhnghe = search.getNganhNghe();
-        if (name == null)
+        if (name == null || name.equals(""))
         {
             // Thêm mới một đối tượng mess9 vào model
             model.addAttribute("mess9","ko có sản phẩm ");
