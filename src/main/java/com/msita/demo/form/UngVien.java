@@ -28,7 +28,7 @@ public class UngVien {
     private String MatKhau;
     @NotBlank(message = "không được để trống")
     @Positive(message = "nhập số")
-    @Size(min = 10,message = "lớn hơn 10 số")
+    @Size(min = 9 ,max = 10,message = "số đt 9 hoặc 10 số")
     private String SDT;
     @Positive(message = "nhập số")
     @Size(min = 9,max = 9 ,message = "số cmnd 9 số")
