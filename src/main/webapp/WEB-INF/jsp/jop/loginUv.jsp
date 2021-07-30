@@ -14,7 +14,7 @@
 
             <input name="MatKhau" placeholder="passwork"  class="common-input mb-20 form-control" required="" type="password">
             <p style="color: red"> ${errorMessage}</p>
-            <a href="/registerUV"> Đăng ký ứng viên</a>
+            <a href="/registerUv"> Đăng ký ứng viên</a>
             <button class="primary-btn mt-20 text-white" style="float: right;">Đăng Nhập</button>
 
             <div class="mt-20 alert-msg" style="text-align: left;"></div>
