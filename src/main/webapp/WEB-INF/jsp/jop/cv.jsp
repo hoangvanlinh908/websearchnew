@@ -77,7 +77,7 @@
         </tr>
         </thead>
         <tbody>
-        <c:forEach items="${listkynghiem1}" var="kinhnghiem" varStatus="i" begin="0" end="100">
+        <c:forEach items="${listkinhnghiem}" var="kinhnghiem" varStatus="i" begin="0" end="100">
             <tr>
                 <td>${kinhnghiem.getSoNam()}</td>
                 <td>${kinhnghiem.getCapBacHienTai()}</td>
