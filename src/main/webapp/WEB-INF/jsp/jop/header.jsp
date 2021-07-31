@@ -34,8 +34,7 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-
-<header id="header" id="home" style="width: ; text-align: center;">
+<header id="header" id="home" style="background-color: #0b0b0b; text-align: center;">
     <div class="container">
         <div class="row align-items-center justify-content-between d-flex">
             <div id="logo">
@@ -47,9 +46,9 @@
                     <li><a href="/home">Giới thiệu</a></li>
                     <li><a href="/home">Ngành nghề</a>
                         <ul>
-                        <c:forEach items="${listnn}" var="textn">
-                    <li><a href="/nganhnghe?id=${textn.getMaNganhNghe()}">${textn.getTenNganhNghe()}</a></li>
-                    </c:forEach>
+                            <c:forEach items="${listnn}" var="textn">
+                                <li><a href="/nganhnghe?id=${textn.getMaNganhNghe()}">${textn.getTenNganhNghe()}</a></li>
+                            </c:forEach>
                         </ul>
                     </li>
                     <li><a href="/home">Giá</a></li>
@@ -80,28 +79,28 @@
                                         <li><a href="/kynang">Kỷ Năng</a></li>
                                     </ul>
 
-                                   </li>
+                                </li>
                                 <li><a href="/logout">Đẵng xuất</a></li>
                             </ul>
                         </li>
                     </c:if>
 
                     <c:if test="${text == null && textUV == null }">
-                    <li><a style="margin-right: 10px;" class="ticker-btn" >Signup</a>
-                        <ul>
-                            <li><a href="/register">Đăng Ký Nhà Tuyển dụng </a></li>
-                            <li><a href="/registerUv">Đăng Ký Ứng viên</a></li>
-                        </ul></li>
-                    <li><a style="margin-right: 10px;" class="ticker-btn" >Login</a>
-                        <ul>
-                            <li><a  href="/login">Nhà Tuyển dụng </a></li>
-                            <li><a href="/loginUv">Ứng viên</a></li>
-                        </ul>
-                    </li>
+                        <li><a style="margin-right: 10px;" class="ticker-btn" href="/home">Signup</a>
+                            <ul>
+                                <li><a href="/register">Đăng Ký Nhà Tuyển dụng </a></li>
+                                <li><a href="/registerUv">Đăng Ký Ứng viên</a></li>
+                            </ul></li>
+                        <li><a style="margin-right: 10px;" class="ticker-btn" href="/home">Login</a>
+                            <ul>
+                                <li><a  href="/login">Nhà Tuyển dụng </a></li>
+                                <li><a href="/loginUv">Ứng viên</a></li>
+                            </ul>
+                        </li>
                     </c:if>
                     <c:if test="${text != null }">
                         <li><a class="ticker-btn" href="/logout">Đẵng xuất</a></li>
-<%--                        <li><a class="ticker-btn" href="">Chào ${text1.getTenCongTy}</a>--%>
+                        <%--                        <li><a class="ticker-btn" href="">Chào ${text1.getTenCongTy}</a>--%>
 
                     </c:if>
                     <c:if test="${ textUV != null}">
@@ -114,7 +113,8 @@
         </div>
     </div>
 </header><!-- #header -->
-<section class="banner-area relative" id="home" style="height: 500px;">
+
+<section class="banner-area relative" id="home" style="height: 400px;">
     <div class="overlay overlay-bg"></div>
     <div class="container">
         <div class="row fullscreen d-flex align-items-center justify-content-center">
@@ -123,7 +123,7 @@
                     <span>Hơn 1500</span> việc làm được đăng tuần trước
 
                 </h1>
-                <form:form  class="serach-form-area" action="/search" method="post" modelAttribute="search">>
+                <form:form  class="serach-form-area" action="/search" method="post" modelAttribute="search">s
                     <div class="row justify-content-center form-wrap">
                         <div class="col-lg-4 form-cols">
                             <form:input path="TieuDe" cssClass="form-control" placeholder="TieuDe"/>
@@ -155,65 +155,31 @@
 </section>
 <!-- End banner Area -->
 
-<!-- Start features Area -->
-<section class="features-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-6">
-                <div class="single-feature">
-                    <h4>Đang tìm kiếm</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="single-feature">
-                    <h4>Đang áp dụng</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="single-feature">
-                    <h4>SBảo vệ</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="single-feature">
-                    <h4>Thông báo</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End features Area -->
 
 <!-- Start popular-post Area -->
 <section class="popular-post-area pt-100">
     <div class="container">
         <div class="row align-items-center">
-            <div class="active-popular-post-carusel">
+            <div class="active-popular-post-carusel" >
                 <c:forEach items="${findBD}" var="fin">
                 <div class="single-popular-post d-flex flex-row">
                     <div class="thumb">
-                        <img class="img-fluid" src="imgbd/${fin.getHinhAnh()}" style="width: 250px;height: 70px;" alt="">
-                        <a class="btns text-uppercase" href="/deltail-id?id=${fin.getMaBaiDang()}">xem bài đăng tuyển dụng</a>
+                        <img class="img-fluid" src="imgbd/${fin.getHinhAnh()}" style="width: 100px ;float: left;height: 100px;" alt="">
                     </div>
                     <div class="details">
                         <a href="#"><h4>${fin.getTieuDe()}</h4></a>
                         <h6>${fin.getNgayDang()}</h6>
                         <p>
-                                ${fin.getChiTietCV()}                        </p>
+                             Tính chất công việc:   ${fin.getTinhChat()}                        </p>
+                        <p style="padding-bottom: 20px">
+                              Mức lương:  ${fin.getMucLuong()}                        </p>
+                        <p>
+                            <a style="background-color: #00b3ee;color: #0b0b0b;border-radius: 20px;padding: 10px;margin-top: 50px "  href="/deltail-id?id=${fin.getMaBaiDang()}">xem bài đăng tuyển dụng</a>
+                        </p>
+
                     </div>
                 </div>
+
                 </c:forEach>
             </div>
         </div>

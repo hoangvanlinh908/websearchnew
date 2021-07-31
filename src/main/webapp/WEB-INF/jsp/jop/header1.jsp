@@ -35,7 +35,7 @@
 </head>
 <body>
 
-<header id="header" id="home" style="width: ; text-align: center;">
+<header id="header" id="home" style="background-color: #0b0b0b; text-align: center;">
     <div class="container">
         <div class="row align-items-center justify-content-between d-flex">
             <div id="logo">
