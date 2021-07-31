@@ -13,8 +13,8 @@
     <p>Email: ${ungvien.getEmail()} </p>
     <p>SDT: ${ungvien.getSDT()} </p>
     <p>CMND: ${ungvien.getCMND()} </p>
-    <p>GioiTinh: ${ungvien.getGioiTinh()} </p>
-    <p>NgaySinh: ${ungvien.getNgaySinh()} </p>
+    <p>Giới tính: ${ungvien.getGioiTinh()} </p>
+    <p>Ngày sinh: ${ungvien.getNgaySinh()} </p>
     <p>Hôn nhân: ${ungvien.getHonNhan()} </p>
 </c:forEach>
 </div>
@@ -23,12 +23,13 @@
     <table class="table">
         <thead>
         <tr>
-            <th scope="col">BangCap</th>
-            <th scope="col">Truong</th>
-            <th scope="col">ThoiGianTN</th>
-            <th  scope="col">NgoaiNgu</th>
-            <th  scope="col">TrinhDo</th>
-            <th  scope="col">MoTa</th>
+            <th scope="col">Bằng cấp</th>
+            <th scope="col">Trường </th>
+            <th scope="col">Thời gian tốt Nghiệp</th>
+            <th  scope="col">NGoại ngữ</th>
+            <th  scope="col">Trình độ</th>
+            <th  scope="col">Mô tã</th>
+
 
 
         </tr>
@@ -54,14 +55,14 @@
     <table class="table">
         <thead>
         <tr>
-            <th scope="col">SoNam</th>
-            <th scope="col">CapBacHienTai</th>
-            <th scope="col">CongTy</th>
-            <th scope="col">ChucVu</th>
-            <th scope="col">ThoiGianBD</th>
-            <th scope="col">ThoiGianKT</th>
-            <th scope="col">MoTaCV</th>
 
+            <th scope="col">Số năm</th>
+            <th scope="col">Cấp bậc hiện tại</th>
+            <th scope="col">Công ty</th>
+            <th scope="col">Chức vụ</th>
+            <th scope="col">Thời gian bắt đầu</th>
+            <th scope="col">Thời gian kết thúc</th>
+            <th scope="col">Mô ta công việc</th>
 
 
         </tr>
@@ -91,9 +92,9 @@
     <table class="table">
         <thead>
         <tr>
-            <th scope="col">KyNangCM</th>
-            <th scope="col">MucDo</th>
-            <th scope="col">MoTa</th>
+            <th scope="col">Kỷ năng</th>
+            <th scope="col">Mức độ</th>
+            <th scope="col">Mô tả</th>
         </tr>
         </thead>
         <tbody>

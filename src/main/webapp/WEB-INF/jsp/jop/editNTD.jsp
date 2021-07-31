@@ -21,13 +21,13 @@
             <h4>Email</h4>
             <form:input readonly="false" path="Email" cssClass="form-control" placeholder="Email"/>
             <form:errors path="Email"/>
-            <h4>MatKhau</h4>
-            <input type="password" name="MatKhau" class="form-control" placeholder="MatKhau">
+            <h4>Mật khẩu</h4>
+            <input type="password" name="MatKhau" class="form-control" placeholder="Mật khẩu">
             <form:errors path="MatKhau"/>
-            <h4>TenCongTy</h4>
-            <form:input path="TenCongTy" cssClass="form-control" placeholder="TenCongTy"/>
+            <h4>Tên công ty</h4>
+            <form:input path="TenCongTy" cssClass="form-control" placeholder="Tên công ty"/>
             <form:errors path="TenCongTy"/>
-            <h4>LinhVuc</h4>
+            <h4>Lĩnh vực</h4>
             <div class="form-group" >
                 <div class="col-10" >
                     <form:select path="LinhVuc" cssClass="float-none">
@@ -37,17 +37,17 @@
 
             </div>
             <form:errors path="LinhVuc"/>
-            <h4>SoLuoc</h4>
-            <form:input path="SoLuoc" cssClass="form-control" placeholder="SoLuoc"/>
+            <h4>Sơ lược</h4>
+            <form:input path="SoLuoc" cssClass="form-control" placeholder="Sơ lược"/>
             <form:errors path="SoLuoc"/>
-            <h4>DiaChi</h4>
-            <form:input path="DiaChi" cssClass="form-control" placeholder="DiaChi"/>
+            <h4>Địa chỉ</h4>
+            <form:input path="DiaChi" cssClass="form-control" placeholder="Địa chỉ"/>
             <form:errors path="DiaChi"/>
-            <h4>MaSoThue</h4>
-            <form:input path="MaSoThue" cssClass="form-control" placeholder="MaSoThue"/>
+            <h4>Mã số thuế</h4>
+            <form:input path="MaSoThue" cssClass="form-control" placeholder="Mã số thuế"/>
             <form:errors path="MaSoThue"/>
-            <h4>DoiTuong</h4>
-            <form:input path="DoiTuong" cssClass="form-control" placeholder="DoiTuong"/>
+            <h4>Đối tượng</h4>
+            <form:input path="DoiTuong" cssClass="form-control" placeholder="Đối tượng"/>
             <form:errors path="DoiTuong"/>
             <h4>Logo</h4>
             <div class="form-group ">

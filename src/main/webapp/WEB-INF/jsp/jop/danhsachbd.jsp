@@ -11,16 +11,16 @@
         <thead>
         <tr>
             <th scope="col">id</th>
-            <th scope="col">MaBaiDang</th>
-            <th scope="col">TieuDe</th>
-            <th scope="col">NgayDang</th>
+            <th scope="col">Mã bài đăng</th>
+            <th scope="col">Tiêu đề bài đăng</th>
+            <th scope="col">Ngày đăng</th>
             <th hidden scope="col">SLTuyenDung</th>
             <th hidden scope="col">TinhChat</th>
             <th hidden scope="col">MucLuong</th>
             <th hidden scope="col">DiaChiLamViec</th>
             <th hidden scope="col">TieuChi</th>
             <th hidden scope="col">ChiTietCV</th>
-            <th scope="col">HinhAnh</th>
+            <th scope="col">Hình ảnh</th>
 
         </tr>
         </thead>

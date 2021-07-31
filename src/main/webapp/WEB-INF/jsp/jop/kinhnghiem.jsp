@@ -14,30 +14,30 @@
 <%--            <h4>KinhNghiem</h4>--%>
 <%--            <form:input path="KinhNghiem" cssClass="form-control" placeholder="KinhNghiem"/>--%>
 <%--            <form:errors path="KinhNghiem"/>--%>
-            <h4>SoNam</h4>
-            <form:input path="SoNam" cssClass="form-control" placeholder="SoNam"/>
+            <h4>Số năm</h4>
+            <form:input path="SoNam" cssClass="form-control" placeholder="Số năm"/>
             <form:errors path="SoNam"/>
-            <h4>CapBacHienTai</h4>
-            <form:input path="CapBacHienTai" cssClass="form-control" placeholder="CapBacHienTai"/>
+            <h4>Cấp bực hiện tại</h4>
+            <form:input path="CapBacHienTai" cssClass="form-control" placeholder="Cấp bực hiện tại"/>
             <form:errors path="CapBacHienTai"/>
-            <h4>CongTy</h4>
-            <form:input path="CongTy" cssClass="form-control" placeholder="CongTy"/>
+            <h4>Công ty</h4>
+            <form:input path="CongTy" cssClass="form-control" placeholder="Công ty"/>
             <form:errors path="CongTy"/>
-            <h4>ChucVu</h4>
-            <form:input path="ChucVu" cssClass="form-control" placeholder="ChucVu"/>
+            <h4>Chức vụ</h4>
+            <form:input path="ChucVu" cssClass="form-control" placeholder="Chức vụ"/>
             <form:errors path="ChucVu"/>
-            <h4>ThoiGianBD</h4>
-            <input type="date" name="ThoiGianBD">
+            <h4>Thời gian bắt đầu</h4>
+            <input type="date" name="Thời gian bắt đầu">
             <form:errors path="ThoiGianBD"/>
 <%--            <form:input path="ThoiGianBD" cssClass="form-control" placeholder="ThoiGianBD"/>--%>
 
-            <h4>ThoiGianKT</h4>
-            <input type="date" name="ThoiGianKT">
+            <h4>Thời gian kết thúc</h4>
+            <input type="date" name="Thời gian kết thúc">
             <form:errors path="ThoiGianKT"/>
 <%--            <form:input path="ThoiGianKT" cssClass="form-control" placeholder="ThoiGianKT"/>--%>
 
-            <h4>MoTaCV</h4>
-            <form:input path="MoTaCV" cssClass="form-control" placeholder="MoTaCV"/>
+            <h4>Mô tả công việc</h4>
+            <form:input path="MoTaCV" cssClass="form-control" placeholder="Mô ta công việc"/>
             <form:errors path="MoTaCV"/>
             <button type="submit" class="primary-btn mt-20 text-white" style="float: right;">Thêm</button>
             <div class="mt-20 alert-msg" style="text-align: left;"></div>

@@ -19,32 +19,30 @@
         <div class="col-lg-12 form-group" style="margin: 0 auto;padding:50px;">
             <form:hidden path="MaNhaTuyenDung" cssClass="form-control" placeholder="MaNhaTuyenDung"/>
             <form:hidden path="MaBaiDang" cssClass="form-control" placeholder="MaBaiDang"/>
-
-            <h4>TieuDe</h4>
-
-            <form:input path="TieuDe" cssClass="form-control" placeholder="TieuDe"/>
+            <h4>Tiêu đề bài đăng</h4>
+            <form:input path="TieuDe" cssClass="form-control" placeholder="Tiêu đề bài đăng"/>
             <form:errors path="TieuDe"/>
-              <h4>SLTuyenDung</h4>
-            <form:input path="SLTuyenDung" cssClass="form-control" placeholder="SLTuyenDung"/>
+              <h4>Số lượng tuyển dụng</h4>
+            <form:input path="SLTuyenDung" cssClass="form-control" placeholder="Số lượng tuyển dụng"/>
             <form:errors path="SLTuyenDung"/>
-            <h4>TinhChat</h4>
-            <form:input path="TinhChat" cssClass="form-control" placeholder="TinhChat"/>
+            <h4>Tính chất</h4>
+            <form:input path="TinhChat" cssClass="form-control" placeholder="Tính chất"/>
             <form:errors path="TinhChat"/>
-            <h4>MucLuong</h4>
-            <form:input path="MucLuong" cssClass="form-control" placeholder="MucLuong"/>
+            <h4>Mức lương</h4>
+            <form:input path="MucLuong" cssClass="form-control" placeholder="Mức lương"/>
             <form:errors path="MucLuong"/>
-            <h4>DiaChiLamViec</h4>
-            <form:input path="DiaChiLamViec" cssClass="form-control" placeholder="DiaChiLamViec"/>
+            <h4>Địa chỉ làm việc</h4>
+            <form:input path="DiaChiLamViec" cssClass="form-control" placeholder="Địa chỉ làm việc"/>
             <form:errors path="DiaChiLamViec"/>
-            <h4>TieuChi</h4>
-            <form:input path="TieuChi" cssClass="form-control" placeholder="TieuChi"/>
+            <h4>Tiêu chí</h4>
+            <form:input path="TieuChi" cssClass="form-control" placeholder="Tiêu chí"/>
             <form:errors path="TieuChi"/>
-            <h4>ChiTietCV</h4>
+            <h4>Chi tiết công việc</h4>
             <form:textarea path="ChiTietCV" cssClass="form-control" placeholder="ChiTietCV"/>
             <form:errors path="ChiTietCV"/>
 
             <div class="form-group" >
-                <h4 style="float: none;">MaNganhNghe</h4>
+                <h4 style="float: none;">Ngành nghề</h4>
                 <div class="col-10" >
                     <form:select path="MaNganhNghe" cssClass="float-none">
                         <form:options  items="${listnn}" itemLabel="TenNganhNghe" itemValue="MaNganhNghe" />
@@ -52,7 +50,7 @@
                 </div>
 
             </div>
-            <h4>HinhAnh</h4>
+            <h4>Hình ảnh</h4>
             <div class="form-group ">
             <div>
 

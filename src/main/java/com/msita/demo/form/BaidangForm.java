@@ -6,8 +6,10 @@ import org.hibernate.annotations.GenericGenerator;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import javax.validation.Valid;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Positive;
 import java.util.Date;
 
 @Entity
@@ -26,7 +28,8 @@ public class BaidangForm {
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "MM/dd/yyyy")
     private Date NgayDang;
-    @Min(1)
+    @Min(value = 1,message = "ko được bé hơn 1")
+    @Positive(message = "nhập số")
     @Column(name = "SLTuyenDung")
     private Integer SLTuyenDung;
     @NotBlank(message = "không được để trống")

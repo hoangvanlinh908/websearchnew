@@ -11,10 +11,10 @@
         <thead>
         <tr>
             <th scope="col">id</th>
-            <th scope="col">MaUngVien</th>
-            <th scope="col">NgayDangKy</th>
-            <th scope="col">TinhTrang</th>
-            <th scope="col">FileCV</th>
+            <th scope="col">Mã ứng viên</th>
+            <th scope="col">Ngày đăng ký</th>
+            <th scope="col">Tình trạng</th>
+            <th scope="col">File cv</th>
             <th scope="col">Thao tác</th>
         </tr>
         </thead>
