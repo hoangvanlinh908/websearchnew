@@ -22,7 +22,8 @@ public class UngVien {
     private String MaUngVien;
     @NotBlank(message = "không được để trống")
     private String Hoten;
-    @Email
+    @NotBlank(message = "không được để trống")
+    @Email(message = "không được để trống @")
     private String Email;
     @NotBlank(message = "không được để trống")
     private String MatKhau;

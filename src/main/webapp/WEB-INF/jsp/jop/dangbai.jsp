@@ -21,25 +21,25 @@
             <h4>Tiêu đề bài đăng</h4>
 
             <form:input path="TieuDe" cssClass="form-control" placeholder="Tiêu đề bài đăng"/>
-            <form:errors path="TieuDe"/>
+            <p style="color: red;"><form:errors path="TieuDe"/></p>
               <h4>Số lượng tuyển dụng</h4>
             <form:input path="SLTuyenDung" cssClass="form-control" placeholder="Số lượng tuyển dụng"/>
-            <form:errors  path="SLTuyenDung" cssClass="error"/>
+            <p style="color: red;"><form:errors  path="SLTuyenDung" cssClass="error"/>
             <h4>Tính chất</h4>
             <form:input path="TinhChat" cssClass="form-control" placeholder="Tính chất"/>
-            <form:errors path="TinhChat"/>
+            <p style="color: red;"><form:errors path="TinhChat"/></p>
             <h4>Mức lương</h4>
             <form:input path="MucLuong" cssClass="form-control" placeholder="Mức lương"/>
-            <form:errors path="MucLuong"/>
+            <p style="color: red;"><form:errors path="MucLuong"/></p>
             <h4>Địa chỉ làm việc</h4>
             <form:input path="DiaChiLamViec" cssClass="form-control" placeholder="Địa chỉ làm việc"/>
-            <form:errors path="DiaChiLamViec"/>
+            <p style="color: red;"><form:errors path="DiaChiLamViec"/></p>
             <h4>Tiêu chí</h4>
             <form:input path="TieuChi" cssClass="form-control" placeholder="Tiêu chí"/>
-            <form:errors path="TieuChi"/>
+            <p style="color: red;"><form:errors path="TieuChi"/></p>
             <h4>Chi tiết Công việc</h4>
             <form:textarea path="ChiTietCV" cssClass="form-control" placeholder="Chi tiết Công việc"/>
-            <form:errors path="ChiTietCV"/>
+            <p style="color: red;"><form:errors path="ChiTietCV"/></p>
 
             <div class="form-group" >
                 <h4 style="float: none;">Ngành Nghề</h4>

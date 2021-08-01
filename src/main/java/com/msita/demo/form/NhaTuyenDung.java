@@ -4,10 +4,7 @@ package com.msita.demo.form;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Positive;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 
 
 @Entity
@@ -20,8 +17,8 @@ public class NhaTuyenDung {
     @GeneratedValue(generator = "my_generator")
     @GenericGenerator(name = "my_generator", strategy = "com.msita.demo.controller.MyGenerator")
     private String MaNhaTuyenDung;
-    @Email(message = "không được để trống @")
     @NotBlank(message = "không được để trống")
+    @Email(message = "không được để trống @")
     private String Email;
     @NotBlank(message = "không được để trống")
     private String MatKhau;

@@ -10,35 +10,31 @@
     <div class="single-post d-flex flex-row">
 
         <div class="col-lg-12 form-group" style="margin: 0 auto;padding:50px;">
-
-<%--            <h4>KinhNghiem</h4>--%>
-<%--            <form:input path="KinhNghiem" cssClass="form-control" placeholder="KinhNghiem"/>--%>
-<%--            <form:errors path="KinhNghiem"/>--%>
             <h4>Số năm</h4>
             <form:input path="SoNam" cssClass="form-control" placeholder="Số năm"/>
-            <form:errors path="SoNam"/>
+    <p style="color: red"><form:errors path="SoNam"/></p>
             <h4>Cấp bực hiện tại</h4>
             <form:input path="CapBacHienTai" cssClass="form-control" placeholder="Cấp bực hiện tại"/>
-            <form:errors path="CapBacHienTai"/>
+    <p style="color: red"><form:errors path="CapBacHienTai"/></p>
             <h4>Công ty</h4>
             <form:input path="CongTy" cssClass="form-control" placeholder="Công ty"/>
-            <form:errors path="CongTy"/>
+    <p style="color: red"><form:errors path="CongTy"/></p>
             <h4>Chức vụ</h4>
             <form:input path="ChucVu" cssClass="form-control" placeholder="Chức vụ"/>
-            <form:errors path="ChucVu"/>
+    <p style="color: red"><form:errors path="ChucVu"/></p>
             <h4>Thời gian bắt đầu</h4>
             <input type="date" name="Thời gian bắt đầu">
-            <form:errors path="ThoiGianBD"/>
+    <p style="color: red"><form:errors path="ThoiGianBD"/></p>
 <%--            <form:input path="ThoiGianBD" cssClass="form-control" placeholder="ThoiGianBD"/>--%>
 
             <h4>Thời gian kết thúc</h4>
             <input type="date" name="Thời gian kết thúc">
-            <form:errors path="ThoiGianKT"/>
+    <p style="color: red"><form:errors path="ThoiGianKT"/></p>
 <%--            <form:input path="ThoiGianKT" cssClass="form-control" placeholder="ThoiGianKT"/>--%>
 
             <h4>Mô tả công việc</h4>
             <form:input path="MoTaCV" cssClass="form-control" placeholder="Mô ta công việc"/>
-            <form:errors path="MoTaCV"/>
+    <p style="color: red"><form:errors path="MoTaCV"/></p>
             <button type="submit" class="primary-btn mt-20 text-white" style="float: right;">Thêm</button>
             <div class="mt-20 alert-msg" style="text-align: left;"></div>
         </div>

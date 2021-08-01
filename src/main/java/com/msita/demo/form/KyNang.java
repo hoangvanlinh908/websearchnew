@@ -6,6 +6,7 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "kynang")
@@ -18,7 +19,8 @@ public class KyNang {
     private String  MaKyNang;
     @NotBlank(message = "không được để trống")
     private String KyNangCM;
-    @Min(1)
+    @NotNull(message = "không được để trống")
+    @Min(value = 1,message = "lơn hơn 1")
     private Integer MucDo;
     @NotBlank(message = "không được để trống")
     private String MoTa;

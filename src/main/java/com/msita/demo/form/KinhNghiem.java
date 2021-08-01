@@ -7,6 +7,9 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.*;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Positive;
+import javax.websocket.OnMessage;
 import java.util.Date;
 
 @Entity
@@ -19,7 +22,9 @@ public class KinhNghiem {
     @GenericGenerator(name = "my_generator", strategy = "com.msita.demo.controller.MyGeneratorKIN")
     private String MaKinhNghiem;
     private byte  KinhNghiem;
-    @Min(1)
+    @Min(value = 1,message = "ko được bé hơn 1")
+    @Positive(message = "nhập số")
+    @NotNull(message = "không được để trống")
     private Integer SoNam ;
     @NotBlank(message = "không được để trống")
     private String CapBacHienTai;

@@ -21,25 +21,25 @@
             <form:hidden path="MaBaiDang" cssClass="form-control" placeholder="MaBaiDang"/>
             <h4>Tiêu đề bài đăng</h4>
             <form:input path="TieuDe" cssClass="form-control" placeholder="Tiêu đề bài đăng"/>
-            <form:errors path="TieuDe"/>
+            <p style="color: red"><form:errors path="TieuDe"/></p>
               <h4>Số lượng tuyển dụng</h4>
             <form:input path="SLTuyenDung" cssClass="form-control" placeholder="Số lượng tuyển dụng"/>
-            <form:errors path="SLTuyenDung"/>
+            <p style="color: red"><form:errors path="SLTuyenDung"/></p>
             <h4>Tính chất</h4>
             <form:input path="TinhChat" cssClass="form-control" placeholder="Tính chất"/>
-            <form:errors path="TinhChat"/>
+            <p style="color: red"><form:errors path="TinhChat"/></p>
             <h4>Mức lương</h4>
             <form:input path="MucLuong" cssClass="form-control" placeholder="Mức lương"/>
-            <form:errors path="MucLuong"/>
+            <p style="color: red"><form:errors path="MucLuong"/></p>
             <h4>Địa chỉ làm việc</h4>
             <form:input path="DiaChiLamViec" cssClass="form-control" placeholder="Địa chỉ làm việc"/>
-            <form:errors path="DiaChiLamViec"/>
+            <p style="color: red"><form:errors path="DiaChiLamViec"/></p>
             <h4>Tiêu chí</h4>
             <form:input path="TieuChi" cssClass="form-control" placeholder="Tiêu chí"/>
-            <form:errors path="TieuChi"/>
+            <p style="color: red"><form:errors path="TieuChi"/></p>
             <h4>Chi tiết công việc</h4>
             <form:textarea path="ChiTietCV" cssClass="form-control" placeholder="ChiTietCV"/>
-            <form:errors path="ChiTietCV"/>
+            <p style="color: red"><form:errors path="ChiTietCV"/></p>
 
             <div class="form-group" >
                 <h4 style="float: none;">Ngành nghề</h4>
@@ -57,7 +57,7 @@
                 <div class="col-10">
                     <input type="file" name="HinhAnh">
                 </div>
-                <img src="/imgbd/${editbd.getHinhAnh()}" height="80px" width="80px">
+                <img src="/imgbd/${editbd1.getHinhAnh()}" height="80px" width="80px">
             </div>
             </div>
             <button type="submit" class="primary-btn mt-20 text-white" style="float: right;">Sửa Bài</button>

@@ -163,6 +163,7 @@ public class NTdungController extends BaseController {
         String HinhAnh = baidang.getHinhAnh();
         String MaNganhNghe = baidang.getMaNganhNghe();
         String MaNhaTuyenDung = baidang.getMaNhaTuyenDung();
+        model.addAttribute("editbd1",baidang);
         model.addAttribute("editbd",new BaidangModel(MaBaiDang,TieuDe, NgayDang, SLTuyenDung, TinhChat, MucLuong, DiaChiLamViec, TieuChi, ChiTietCV, HinhAnh, MaNhaTuyenDung, MaNganhNghe));
         return "editbd";
     }
@@ -199,7 +200,7 @@ public class NTdungController extends BaseController {
             HinhAnh = hinhanh.getOriginalFilename();
             if (!HinhAnh.contains(".jpg") && !HinhAnh.contains(".png")) {
                 model.addAttribute("message", "Invalid image file");
-                return "editProduct";
+                return "editbd";
             }
 
             BaidangModel baidangModel = nhaTuyenDungServices.finbymabd(baidang.getMaBaiDang());
@@ -247,6 +248,7 @@ public class NTdungController extends BaseController {
         String MaSoThue = nhaTuyenDung.get(0).getMaSoThue();
         String DoiTuong  = nhaTuyenDung.get(0).getDoiTuong();
         String Logo = nhaTuyenDung.get(0).getLogo();
+        model.addAttribute("nhatuyendung1",nhaTuyenDung.get(0));
         model.addAttribute("nhatuyendung",new NhaTuyenDungModel(MaNhaTuyenDung,email,MatKhau,TenCongTy,LinhVuc,SoLuoc,DiaChi,MaSoThue,DoiTuong,Logo));
         return "editNTD";
     }

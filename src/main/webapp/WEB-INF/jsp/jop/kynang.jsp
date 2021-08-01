@@ -13,13 +13,13 @@
 
             <h4>Kỷ năng chuyên môn</h4>
             <form:input path="KyNangCM" cssClass="form-control" placeholder="Kỷ năng chuyên môn"/>
-            <form:errors path="KyNangCM"/>
+            <p style="color: red"><form:errors path="KyNangCM"/></p>
             <h4>Mức độ</h4>
             <form:input path="MucDo" cssClass="form-control" placeholder="Mức độ"/>
-            <form:errors path="MucDo"/>
+            <p style="color: red"><form:errors path="MucDo"/></p>
             <h4>Mô tả</h4>
             <form:input path="MoTa" cssClass="form-control" placeholder="Mô tả"/>
-            <form:errors path="MoTa"/>
+            <p style="color: red"><form:errors path="MoTa"/></p>
             <button type="submit" class="primary-btn mt-20 text-white" style="float: right;">Thêm</button>
             <div class="mt-20 alert-msg" style="text-align: left;"></div>
         </div>

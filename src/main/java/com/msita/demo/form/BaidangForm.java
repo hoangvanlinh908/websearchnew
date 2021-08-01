@@ -21,7 +21,7 @@ public class BaidangForm {
 
     @Column(name = "MaBaiDang")
     private String MaBaiDang;
-    @NotBlank
+    @NotBlank(message = "không được để trống")
     @Column(name = "TieuDe")
     private String TieuDe;
     @Column(name = "NgayDang")

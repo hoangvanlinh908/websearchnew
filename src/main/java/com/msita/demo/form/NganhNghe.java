@@ -11,9 +11,9 @@ import java.util.List;
 
 public class NganhNghe {
     @Id
-    private String MaNganhNghe ;
-    private String TenNganhNghe;
-    private String Logo;
+    protected String MaNganhNghe ;
+    protected String TenNganhNghe;
+    protected String Logo;
     @OneToMany(mappedBy ="nganhNghe",fetch = FetchType.EAGER)
     private List<Baidang> baidang;
 

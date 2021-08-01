@@ -20,15 +20,15 @@
 
             <h4>Email</h4>
             <form:input path="Email" cssClass="form-control" placeholder="Email"/>
-            <form:errors path="Email"/>
+            <p style="color: red"><form:errors path="Email"/></p>
             <p style="color: red;">${mss}</p>
             <h4>Mật khẩu</h4>
             <input type="password" name="MatKhau" class="form-control" placeholder="Mật khẩu">
 <%--            <form:input path="MatKhau" cssClass="form-control" placeholder="MatKhau"/>--%>
-            <form:errors path="MatKhau"/>
+            <p style="color: red"><form:errors path="MatKhau"/></p>
             <h4>Tên công ty</h4>
             <form:input path="TenCongTy" cssClass="form-control" placeholder="Tên công ty"/>
-            <form:errors path="TenCongTy"/>
+            <p style="color: red"><form:errors path="TenCongTy"/></p>
             <h4>Lỉnh vực</h4>
             <div class="form-group" >
 
@@ -40,19 +40,19 @@
                 </div>
 
             </div>
-            <form:errors path="LinhVuc"/>
+            <p style="color: red"><form:errors path="LinhVuc"/></p>
             <h4>Sơ lược</h4>
             <form:input path="SoLuoc" cssClass="form-control" placeholder="Sơ lược"/>
-            <form:errors path="SoLuoc"/>
+            <p style="color: red"><form:errors path="SoLuoc"/></p>
             <h4>Địa chỉ</h4>
             <form:input path="DiaChi" cssClass="form-control" placeholder="Địa chỉ"/>
-            <form:errors path="DiaChi"/>
+            <p style="color: red"><form:errors path="DiaChi"/></p>
             <h4>Mã số thuế</h4>
             <form:input path="MaSoThue" cssClass="form-control" placeholder="Mã số thuế"/>
-            <form:errors path="MaSoThue"/>
+            <p style="color: red"><form:errors path="MaSoThue"/></p>
             <h4>Đối tượng</h4>
             <form:input path="DoiTuong" cssClass="form-control" placeholder="Đối tượng"/>
-            <form:errors path="DoiTuong"/>
+            <p style="color: red"><form:errors path="DoiTuong"/></p>
             <h4>Logo</h4>
             <div class="form-group ">
 

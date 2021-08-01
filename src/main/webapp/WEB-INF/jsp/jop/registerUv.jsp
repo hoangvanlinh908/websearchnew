@@ -20,38 +20,38 @@
 
             <h4>Email</h4>
             <form:input path="Email" cssClass="form-control" placeholder="Email"/>
-            <form:errors path="Email"/>
+            <p style="color: red"><form:errors path="Email"/></p>
             <p style="color: red;">${msss}</p>
             <h4>Mật khẩu</h4>
             <input type="password" name="MatKhau" class="form-control" placeholder="Mật khẩu">
-            <form:errors path="MatKhau"/>
+            <p style="color: red"><form:errors path="MatKhau"/></p>
             <h4>Họ tên</h4>
             <form:input path="Hoten" cssClass="form-control" placeholder="Hoten"/>
-            <form:errors path="Hoten"/>
+            <p style="color: red"><form:errors path="Hoten"/></p>
             <h4>Số điện thoại</h4>
             <form:input path="SDT" cssClass="form-control" placeholder="SDT"/>
-            <form:errors path="SDT"/>
+            <p style="color: red"><form:errors path="SDT"/></p>
             <h4>Chứng minh nhân dân</h4>
             <form:input path="CMND" cssClass="form-control" placeholder="CMND"/>
-            <form:errors path="CMND"/>
+            <p style="color: red"><form:errors path="CMND"/></p>
             <h4>Giới tính</h4>
             Nam <form:radiobutton path="GioiTinh"  value="Nam" />
             Nữ <form:radiobutton path="GioiTinh" value="Nữ"/>
             Giới tính khác <form:radiobutton path="GioiTinh" value="Giới tính khác"/>
-            <form:errors path="GioiTinh"/>
+            <p style="color: red"><form:errors path="GioiTinh"/></p>
             <h4>Ngày sinh</h4>
             <input type="date" name="NgaySinh">
-            <form:errors path="NgaySinh"/>
+            <p style="color: red"><form:errors path="NgaySinh"/></p>
             <h4>Địa chỉ</h4>
             <form:input path="DiaChi" cssClass="form-control" placeholder="DiaChi"/>
-            <form:errors path="DiaChi"/>
+            <p style="color: red"><form:errors path="DiaChi"/></p>
             <h4>Hô nhân</h4>
             Đã kết hôn <form:radiobutton path="HonNhan"  value="Đã kết hôn" />
             Chưa kết hôn <form:radiobutton path="HonNhan" value="Chưa kết hôn"/>
             <h4>Thành tích</h4>
-            <form:errors path="HonNhan"/>
+            <p style="color: red"><form:errors path="HonNhan"/></p>
             <form:input path="ThanhTich" cssClass="form-control" placeholder="ThanhTich"/>
-            <form:errors path="ThanhTich"/>
+            <p style="color: red"><form:errors path="ThanhTich"/></p>
             <button type="submit" class="primary-btn mt-20 text-white" style="float: right;">Đăng Ký</button>
             <div class="mt-20 alert-msg" style="text-align: left;"></div>
         </div>
