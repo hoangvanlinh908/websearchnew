@@ -16,8 +16,8 @@ import java.util.List;
 public interface HSRepository extends JpaRepository<HoSoUngTuyen,String> {
     @Query("SELECT m FROM HoSoUngTuyen m WHERE m.MaUngVien = :mauv")
     List<HoSoUngTuyen> finallbyMA(@Param("mauv") String mauv);
-    @Query("SELECT m FROM HoSoUngTuyen m WHERE m.MaUngVien = :mauv and  m.MaBaiDang = :mabd")
-    List<HoSoUngTuyen> finallbyMA1(@Param("mauv") String mauv, @Param("mabd") String mabd);
+    @Query("SELECT m.id FROM HoSoUngTuyen m WHERE m.MaUngVien = :mauv and  m.MaBaiDang = :mabd")
+    String finallbyMA1(@Param("mauv") String mauv, @Param("mabd") String mabd);
     @Transactional
     @Modifying
     @Query("SELECT m FROM HoSoUngTuyen m WHERE  m.MaBaiDang = :mabd")

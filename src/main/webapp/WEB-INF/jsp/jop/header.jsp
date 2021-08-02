@@ -59,7 +59,7 @@
 
                             <ul>
                                 <c:forEach items="${textn}" var="textn">
-                                    <li><a href="/edit-NTD?id=${textn.getMaNhaTuyenDung()}">Chỉnh sửa thong tin </a></li>
+                                    <li><a href="/edit-NTD?id=${textn.getMaNhaTuyenDung()}">Chỉnh sửa thông tin </a></li>
                                 </c:forEach>
                                 <li><a href="/danhsachbd">Danh sách bài đăng</a></li>
                                 <li><a href="/Dangbai">Đăng Bài</a></li>
@@ -70,7 +70,10 @@
                     <c:if test="${textUV != null}">
                         <li class="menu-has-children"><a href="">Thông tin</a>
 
-                            <ul><li><a href="/hoso">Công việc đã nộp</a></li>
+                            <ul><c:forEach items="${textn1}" var="textn">
+                                <li><a href="/edit-UV?id=${textn.getMaUngVien()}">Chỉnh sửa thông tin </a></li>
+                            </c:forEach>
+                                <li><a href="/hoso">Công việc đã nộp</a></li>
                                 <li><a href="/cv">Xem thông tin cá nhân</a></li>
                                 <li><a href="/home">Cập nhập cv</a>
                                     <ul>

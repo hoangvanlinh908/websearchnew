@@ -3,6 +3,7 @@ package com.msita.demo.controller;
 
 import com.msita.demo.form.NganhNghe;
 import com.msita.demo.form.NhaTuyenDung;
+import com.msita.demo.form.UngVien;
 import com.msita.demo.form.search;
 import com.msita.demo.models.NhaTuyenDungModel;
 import com.msita.demo.services.NhaTuyenDungServices;
@@ -30,6 +31,11 @@ public class BaseController {
     public List<NhaTuyenDung> nhaTuyenDungs(HttpSession session){
         String loginUser = (String) session.getAttribute("loginFormUser");
         return  nhaTuyenDungServices.finbyidntd(loginUser);
+    }
+    @ModelAttribute("textn1")
+    public List<UngVien> ungViens(HttpSession session){
+        String loginUser = (String) session.getAttribute("loginFormUserUV");
+        return  ungVienServices.finungvien(loginUser);
     }
     @ModelAttribute("listnn")
     public List<NganhNghe> nganhNgheList(HttpSession session){

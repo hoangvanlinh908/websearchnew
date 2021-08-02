@@ -72,6 +72,11 @@
         <put-attribute name="body" value="/WEB-INF/jsp/jop/editNTD.jsp" />
 
     </definition>
+    <definition name="editUV"
+                extends="client.definition2">
+        <put-attribute name="body" value="/WEB-INF/jsp/jop/editUV.jsp" />
+
+    </definition>
     <definition name="danhsach"
                 extends="client.definition2">
         <put-attribute name="body" value="/WEB-INF/jsp/jop/danhsach.jsp" />

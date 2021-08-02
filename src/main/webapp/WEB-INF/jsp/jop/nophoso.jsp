@@ -12,8 +12,7 @@
 
             <h4>File cv</h4>
             <form:input path="FileCV" cssClass="form-control" placeholder="File cv"/>
-
-
+            <p style="color: red">${thongbao}</p>
             <button type="submit" class="primary-btn mt-20 text-white" style="float: right;">Đăng Ký</button>
             <div class="mt-20 alert-msg" style="text-align: left;"></div>
         </div>

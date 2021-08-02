@@ -55,7 +55,7 @@
 
 
                 <div class="col-10">
-                    <input type="file" name="HinhAnh">
+                    <input type="file" name="HinhAnh" onchange="return validateFileExtension(this)">
                 </div>
             </div>
             <button type="submit" class="primary-btn mt-20 text-white" style="float: right;">Đăng Bài</button>
@@ -63,3 +63,13 @@
         </div>
     </div>
 </form:form>
+<script type="text/javascript">
+    function validateFileExtension(fld) {
+        if(!/(\.png|\.PNG|\.jpg|\.jpeg)$/i.test(fld.value)) {
+            alert("Chon file ảnh có đuôi jpg,png,jpeg.");
+            fld.form.reset();
+            fld.focus();
+            return false;
+        }
+        return true;
+    } </script>

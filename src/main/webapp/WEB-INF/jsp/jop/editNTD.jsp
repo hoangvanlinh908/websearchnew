@@ -19,7 +19,7 @@
         <div class="col-lg-12 form-group" style="margin: 0 auto;padding:50px;">
             <form:hidden path="MaNhaTuyenDung" cssClass="form-control" placeholder="MaNhaTuyenDung"/>
             <h4>Email</h4>
-            <form:input readonly="false" path="Email" cssClass="form-control" placeholder="Email"/>
+            <input  class="form-control" type="text" name="Email" value="${nhatuyendung.getEmail()}" readonly>
             <p style="color: red"><form:errors path="Email"/></p>
             <h4>Mật khẩu</h4>
             <input type="password" name="MatKhau"  value="${nhatuyendung.getMatKhau()}" class="form-control" placeholder="Mật khẩu">
@@ -54,12 +54,22 @@
 
 
                 <div class="col-10">
-                    <input type="file" name="Logo">
+                    <input type="file" name="Logo" onchange="return validateFileExtension(this)">
                 </div>
-                <img src="/imglogo/${nhatuyendung1.getLogo()}" height="80px" width="80px">
+                <img src="/imglogo/${nhatuyendung1.getLogo()}"  height="80px" width="80px">
             </div>
             <button type="submit" class="primary-btn mt-20 text-white" style="float: right;">Sửa</button>
             <div class="mt-20 alert-msg" style="text-align: left;"></div>
         </div>
     </div>
 </form:form>
+<script type="text/javascript">
+    function validateFileExtension(fld) {
+        if(!/(\.png|\.PNG|\.jpg|\.jpeg)$/i.test(fld.value)) {
+            alert("Chon file ảnh có đuôi jpg,png,jpeg.");
+            fld.form.reset();
+            fld.focus();
+            return false;
+        }
+        return true;
+    } </script>

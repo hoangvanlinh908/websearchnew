@@ -43,7 +43,21 @@ public UngVienModel() {
 
 }
 
-    public UngVienModel( String hoten, String email, String matKhau, String SDT, String CMND, String gioiTinh, Date ngaySinh, String diaChi, String honNhan, String thanhTich) {
+    public UngVienModel(String maUngVien, String hoten, String email, String matKhau, String SDT, String CMND, String gioiTinh, Date ngaySinh, String diaChi, String honNhan, String thanhTich) {
+        MaUngVien = maUngVien;
+        Hoten = hoten;
+        Email = email;
+        MatKhau = matKhau;
+        this.SDT = SDT;
+        this.CMND = CMND;
+        GioiTinh = gioiTinh;
+        NgaySinh = ngaySinh;
+        DiaChi = diaChi;
+        HonNhan = honNhan;
+        ThanhTich = thanhTich;
+    }
+
+    public UngVienModel(String hoten, String email, String matKhau, String SDT, String CMND, String gioiTinh, Date ngaySinh, String diaChi, String honNhan, String thanhTich) {
 
         Hoten = hoten;
         Email = email;

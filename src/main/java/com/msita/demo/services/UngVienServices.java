@@ -86,4 +86,8 @@ private NganhNgher nganhNghe;
     public String finemail(String email){
         return uvRepository.quyery2(email);
     }
+    public String finungvienhs (String id,String mabd){
+        return hsRepository.finallbyMA1(id,mabd);
+    }
+
 }

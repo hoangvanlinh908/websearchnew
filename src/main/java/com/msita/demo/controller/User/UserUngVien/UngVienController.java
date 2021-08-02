@@ -1,6 +1,7 @@
 package com.msita.demo.controller.User.UserUngVien;
 import com.msita.demo.controller.BaseController;
 import com.msita.demo.form.*;
+import com.msita.demo.models.NhaTuyenDungModel;
 import com.msita.demo.models.UngVienModel;
 import com.msita.demo.services.UngVienServices;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,9 +12,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
+
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Date;
 import java.util.List;
 
@@ -102,6 +108,11 @@ public class UngVienController extends BaseController {
     public String danhsach(@ModelAttribute("nophoso") HoSoUngTuyen hoSoUngTuyen,HttpSession session,Model model){
         String mauv = (String) session.getAttribute("loginFormUserUV");
         String mabd = (String) session.getAttribute("idbd");
+        String hoSoUngTuyens=ungVienServices.finungvienhs(mauv,mabd);
+        if (hoSoUngTuyens != null){
+            model.addAttribute("thongbao","bạn đã đăng ký công việc này rồi xin vui lòng kiểm tra lại");
+            return "nophoso";
+        }
         String MaBaiDang = mabd;
         String MaUngVien = mauv;
         Date NgayDangKy = new Date();
@@ -244,6 +255,62 @@ public class UngVienController extends BaseController {
         model.addAttribute("listkynang",kyNangs);
         model.addAttribute("ungvien1",ungViens);
         return "cv";
+    }
+
+
+    @GetMapping("/edit-UV")
+    public  String edit(@RequestParam("id") String id,Model model,HttpSession session){
+
+        String mantd = (String) session.getAttribute("loginFormUserUV");
+        if (mantd == null) {
+            return "redirect:/loginUV";
+        }
+        List<UngVien> ungVien = ungVienServices.finungvien(id);
+        String MaUngVien = ungVien.get(0).getMaUngVien();
+        String email = ungVien.get(0).getEmail();
+        String MatKhau = ungVien.get(0).getMatKhau();
+        String Hoten = ungVien.get(0).getHoten();
+        String  SDT= ungVien.get(0).getSDT();
+        String CMND = ungVien.get(0).getCMND();
+        String  GioiTinh = ungVien.get(0).getGioiTinh();
+        Date ngaySinh = ungVien.get(0).getNgaySinh();
+        String diaChi  = ungVien.get(0).getDiaChi();
+        String  honNhan = ungVien.get(0).getHonNhan();
+        String thanhTich = ungVien.get(0).getThanhTich();
+        model.addAttribute("editUV",new  UngVienModel(MaUngVien,Hoten,email,MatKhau,SDT,CMND,GioiTinh,ngaySinh,diaChi,honNhan,thanhTich));
+        return "editUV";
+    }
+    @PostMapping("/edit-UV")
+    public  String editNTD(@Valid @ModelAttribute("editUV") UngVien ungVien, BindingResult bindingResult,  Model model)throws IOException {
+        if (bindingResult.hasErrors())  {
+            return "editUV";
+        }
+        String email = ungVien.getEmail();
+        String e = ungVienServices.finemail(email);
+        String MaUngVien = ungVien.getMaUngVien();
+        ungVien.setMaUngVien(MaUngVien);
+        ungVien.setEmail(email);
+        String MatKhau = ungVien.getMatKhau();
+        ungVien.setMatKhau(MatKhau);
+        String Hoten = ungVien.getHoten();
+        ungVien.setHoten(Hoten);
+        String  SDT= ungVien.getSDT();
+        ungVien.setSDT(SDT);
+        String CMND = ungVien.getCMND();
+        ungVien.setCMND(CMND);
+        String  GioiTinh = ungVien.getGioiTinh();
+        ungVien.setGioiTinh(GioiTinh);
+        Date ngaySinh = ungVien.getNgaySinh();
+        ungVien.setNgaySinh(ngaySinh);
+        String diaChi  = ungVien.getDiaChi();
+        ungVien.setDiaChi(diaChi);
+        String  honNhan = ungVien.getHonNhan();
+        ungVien.setHonNhan(honNhan);
+        String thanhTich = ungVien.getThanhTich();
+        ungVien.setThanhTich(thanhTich);
+        ungVienServices.save( new  UngVienModel(MaUngVien,Hoten,email,MatKhau,SDT,CMND,GioiTinh,ngaySinh,diaChi,honNhan,thanhTich));
+
+        return "redirect:/home";
     }
 
 }
